@@ -1,0 +1,293 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-100-percent {
+    width: 75px;
+    height: 60px;
+    background-position: -5px -5px;
+}
+
+.sprite-arabika-logo {
+    width: 77px;
+    height: 77px;
+    background-position: -90px -5px;
+}
+
+.sprite-avtomag {
+    width: 77px;
+    height: 13px;
+    background-position: -177px -5px;
+}
+
+.sprite-card {
+    width: 42px;
+    height: 42px;
+    background-position: -264px -5px;
+}
+
+.sprite-cash-icon {
+    width: 42px;
+    height: 42px;
+    background-position: -177px -57px;
+}
+
+.sprite-checkboxchecked {
+    width: 16px;
+    height: 16px;
+    background-position: -316px -5px;
+}
+
+.sprite-checkboxcheckedmousedown {
+    width: 16px;
+    height: 16px;
+    background-position: -177px -31px;
+}
+
+.sprite-checkboxcheckedrollover {
+    width: 16px;
+    height: 16px;
+    background-position: -203px -31px;
+}
+
+.sprite-checkboxuncheckedmousedown {
+    width: 16px;
+    height: 16px;
+    background-position: -229px -31px;
+}
+
+.sprite-checkboxuncheckedrollover {
+    width: 16px;
+    height: 16px;
+    background-position: -316px -31px;
+}
+
+.sprite-close {
+    width: 27px;
+    height: 27px;
+    background-position: -229px -57px;
+}
+
+.sprite-corner {
+    width: 24px;
+    height: 13px;
+    background-position: -266px -57px;
+}
+
+.sprite-credit-icon {
+    width: 42px;
+    height: 42px;
+    background-position: -5px -80px;
+}
+
+.sprite-facebook-icon {
+    width: 31px;
+    height: 30px;
+    background-position: -300px -57px;
+}
+
+.sprite-form-icons {
+    width: 31px;
+    height: 131px;
+    background-position: -57px -97px;
+}
+
+.sprite-form-icons1 {
+    width: 15px;
+    height: 22px;
+    background-position: -98px -97px;
+}
+
+.sprite-form-icons2 {
+    width: 15px;
+    height: 30px;
+    background-position: -123px -97px;
+}
+
+.sprite-form-icons22 {
+    width: 15px;
+    height: 30px;
+    background-position: -148px -97px;
+}
+
+.sprite-form-icons3 {
+    width: 15px;
+    height: 19px;
+    background-position: -229px -97px;
+}
+
+.sprite-form-icons32 {
+    width: 15px;
+    height: 19px;
+    background-position: -254px -97px;
+}
+
+.sprite-formula_m2 {
+    width: 77px;
+    height: 39px;
+    background-position: -173px -126px;
+}
+
+.sprite-free-shipping {
+    width: 71px;
+    height: 45px;
+    background-position: -260px -126px;
+}
+
+.sprite-good_doktor-ieu {
+    width: 61px;
+    height: 77px;
+    background-position: -98px -181px;
+}
+
+.sprite-gooddoctor {
+    width: 61px;
+    height: 77px;
+    background-position: -169px -181px;
+}
+
+.sprite-insta {
+    width: 41px;
+    height: 30px;
+    background-position: -5px -181px;
+}
+
+.sprite-logo_sibir_gostinitsa_bol {
+    width: 77px;
+    height: 59px;
+    background-position: -240px -181px;
+}
+
+.sprite-millefamille {
+    width: 77px;
+    height: 38px;
+    background-position: -5px -250px;
+}
+
+.sprite-new {
+    width: 60px;
+    height: 60px;
+    background-position: -240px -250px;
+}
+
+.sprite-next-u4983 {
+    width: 30px;
+    height: 45px;
+    background-position: -342px -5px;
+}
+
+.sprite-next-u4983-r {
+    width: 30px;
+    height: 45px;
+    background-position: -341px -60px;
+}
+
+.sprite-next-u7322 {
+    width: 30px;
+    height: 45px;
+    background-position: -341px -115px;
+}
+
+.sprite-next-u7322-r {
+    width: 30px;
+    height: 45px;
+    background-position: -341px -170px;
+}
+
+.sprite-ok-icon {
+    width: 30px;
+    height: 30px;
+    background-position: -327px -225px;
+}
+
+.sprite-prev-u4986 {
+    width: 30px;
+    height: 48px;
+    background-position: -310px -265px;
+}
+
+.sprite-prev-u4986-r {
+    width: 30px;
+    height: 48px;
+    background-position: -5px -323px;
+}
+
+.sprite-prev-u7314 {
+    width: 30px;
+    height: 45px;
+    background-position: -45px -323px;
+}
+
+.sprite-prev-u7314-r {
+    width: 30px;
+    height: 45px;
+    background-position: -85px -323px;
+}
+
+.sprite-radiobuttonchecked {
+    width: 16px;
+    height: 16px;
+    background-position: -350px -265px;
+}
+
+.sprite-radiobuttoncheckedmousedown {
+    width: 16px;
+    height: 16px;
+    background-position: -92px -291px;
+}
+
+.sprite-radiobuttoncheckedrollover {
+    width: 16px;
+    height: 16px;
+    background-position: -118px -291px;
+}
+
+.sprite-radiobuttonunchecked {
+    width: 16px;
+    height: 16px;
+    background-position: -144px -291px;
+}
+
+.sprite-radiobuttonuncheckedmousedown {
+    width: 16px;
+    height: 16px;
+    background-position: -170px -291px;
+}
+
+.sprite-radiobuttonuncheckedrollover {
+    width: 16px;
+    height: 16px;
+    background-position: -196px -291px;
+}
+
+.sprite-stamp-icon {
+    width: 45px;
+    height: 45px;
+    background-position: -125px -323px;
+}
+
+.sprite-thumbs-up {
+    width: 42px;
+    height: 42px;
+    background-position: -180px -323px;
+}
+
+.sprite-track {
+    width: 42px;
+    height: 42px;
+    background-position: -232px -323px;
+}
+
+.sprite-vuuo-tgnyqg {
+    width: 30px;
+    height: 30px;
+    background-position: -284px -323px;
+}
+
+.sprite-win-icon {
+    width: 42px;
+    height: 42px;
+    background-position: -324px -323px;
+}
