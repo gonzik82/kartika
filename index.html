@@ -422,14 +422,14 @@
             </p>
             <p class="leave-request-main-form-part1-three-line">
               <p>Выберите толщину карты:</p>
-              <input type="radio" name="card-thickness" id="card-thickness-046" checked>
+              <input type="radio" name="card-thickness" id="card-thickness-046" value="0.46" checked>
               <label class="check-box-card-thickness" for="card-thickness-046">0,46мм (тонкая карта)</label>
-              <input type="radio" name="card-thickness" id="card-thickness-076">
+              <input type="radio" name="card-thickness" id="card-thickness-076" value="0.76">
               <label class="check-box-card-thickness" for="card-thickness-076">0,76мм (толстая карта)</label>
               <p>Выберите тип печати:</p>
-              <input type="radio" name="print-type" id="print-type-44" checked>
+              <input type="radio" name="print-type" id="print-type-44" value="4+4" checked>
               <label class="check-box-print-type" for="print-type-44">4+4 (двухсторонняя)</label>
-              <input type="radio" name="print-type" id="print-type-40">
+              <input type="radio" name="print-type" id="print-type-40" value="4+0">
               <label class="check-box-print-type" for="print-type-40">4+0 (односторонняя)</label>
             </p>
           </fieldset>
@@ -438,31 +438,44 @@
               <h3 class="leave-request-main-form-part2-title">Виды персонализации:</h3>
             </legend>
             <p>
-              <input type="checkbox" class="types-personalization" name="types-personalization" id="types-personalization-hico">
+              <input type="checkbox" class="types-personalization" name="types-personalization-hico" id="types-personalization-hico">
               <label class="check-box-types-personalization  hico" for="types-personalization-hico">Магнитная полоса</label>
-              <input type="checkbox" class="types-personalization" name="types-personalization" id="types-personalization-barcode">
+              <input type="checkbox" class="types-personalization" name="types-personalization-barcode" id="types-personalization-barcode">
               <label class="check-box-types-personalization  barcode" for="types-personalization-barcode">Штрих-код</label>
-              <input type="checkbox" class="types-personalization" name="types-personalization" id="types-personalization-scratch">
+              <input type="checkbox" class="types-personalization" name="types-personalization-scratch" id="types-personalization-scratch">
               <label class="check-box-types-personalization  scratch" for="types-personalization-scratch">Скретч-полоса</label>
-              <input type="checkbox" class="types-personalization" name="types-personalization" id="types-personalization-emboss">
+              <input type="checkbox" class="types-personalization" name="types-personalization-emboss" id="types-personalization-emboss">
               <label class="check-box-types-personalization  emboss" for="types-personalization-emboss">Эмбоссирование</label>
-              <input type="checkbox" class="types-personalization" name="types-personalization" id="types-personalization-signature-band">
+              <input type="checkbox" class="types-personalization" name="types-personalization-signature-band" id="types-personalization-signature-band">
               <label class="check-box-types-personalization  signature-band" for="types-personalization-signature-band">Полоса для подписи</label>
             </p>
             <p>
-            <input type="checkbox" class="types-personalization" name="types-personalization" id="types-personalization-variable-numbering">
-            <label class="check-box-types-personalization  variable-numbering" for="types-personalization-variable-numbering">Переменная нумерация</label>
-            <input type="checkbox" class="types-personalization" name="types-personalization" id="types-personalization-sublimation">
-            <label class="check-box-types-personalization  sublimation" for="types-personalization-sublimation">Сублимационная печать</label>
-            <input type="checkbox" class="types-personalization" name="types-personalization" id="types-personalization-indent">
-            <label class="check-box-types-personalization  indent" for="types-personalization-sublimation-indent">Индент печать</label>
-          </p>
-          <p>
-            <span class="smartcard-title">Наличие чипа:</span>
-            <input type="radio" class="types-personalization-smartcard" name="smartcard" id="smartcard-title-without">
-            <label class="radio-types-personalization-smartcard  without" for="smartcard-title-without">Без чипа</label>
-          </p>
-
+              <input type="checkbox" class="types-personalization" name="types-personalization-variable-numbering" id="types-personalization-variable-numbering">
+              <label class="check-box-types-personalization  variable-numbering" for="types-personalization-variable-numbering">Переменная нумерация</label>
+              <input type="checkbox" class="types-personalization" name="types-personalization-sublimation" id="types-personalization-sublimation">
+              <label class="check-box-types-personalization  sublimation" for="types-personalization-sublimation">Сублимационная печать</label>
+              <input type="checkbox" class="types-personalization" name="types-personalization-indent" id="types-personalization-indent">
+              <label class="check-box-types-personalization  indent" for="types-personalization-indent">Индент печать</label>
+            </p>
+            <p>
+              <p><span class="smartcard-title">Наличие чипа:</span></p>
+              <p>
+                <input type="radio" class="types-personalization-smartcard" name="smartcard" value="without" id="smartcard-without">
+                <label class="radio-types-personalization-smartcard  without" for="smartcard-without">Без чипа</label>
+                <input type="radio" class="types-personalization-smartcard" name="smartcard" value="emarine" id="smartcard-emarine">
+                <label class="radio-types-personalization-smartcard  emarine" for="smartcard-emarine">EMarine</label>
+                <input type="radio" class="types-personalization-smartcard" name="smartcard" value="mifare" id="smartcard-mifare">
+                <label class="radio-types-personalization-smartcard mifare" for="smartcard-mifare">Mifare</label>
+                <input type="radio" class="types-personalization-smartcard" name="smartcard" value="icode" id="smartcard-icode">
+                <label class="radio-types-personalization-smartcard icode" for="smartcard-icode">icode</label>
+              </p>
+              <p>
+                <input type="file" class="types-personalization" name="maket" id="card-maket">
+              </p>
+              <p>
+                <textarea name="types-personalization-text-user" id="types-personalization-text-user" rows="8" cols="80" placeholder="Коментарий к заказу"></textarea>
+              </p>
+<input type="submit" name="submit" value="Расчитать стоимость ">
           </fieldset>
 
 
