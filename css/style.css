@@ -20,10 +20,13 @@ html, body {
   border: 0;
 }
 
-.main-header-center {
-  display: flex;
+.div-center {
   width: 960px;
   margin: 0 auto;
+}
+
+.main-header-center {
+  display: flex;
 }
 
 .mp-zero {
@@ -73,28 +76,65 @@ html, body {
 
 .btn-header {
   display: block;
-border: #52a4d0 solid 4px;
-border-radius: 23px;
-text-decoration: none;
-color: #00A3D0;
-width: 204px;
-height: 33px;
-margin-top: 12px;
-margin-left: auto;
-text-align: center;
-font-family: inherit;
-text-transform: uppercase;
+  border: #52a4d0 solid 4px;
+  border-radius: 23px;
+  text-decoration: none;
+  color: #00A3D0;
+  width: 204px;
+  height: 33px;
+  margin-top: 12px;
+  margin-left: auto;
+  text-align: center;
+  font-family: inherit;
+  text-transform: uppercase;
 }
 
-.btn-header:hover{
+.btn-header:hover {
   background-color: #52a4d0;
   color: white;
 }
 
-.btn-header:active{
+.btn-header:active {
   background-color: #567e94;
   border-color: #567e94;
   color: white;
+}
+
+.capture-page {
+  min-height: 539px;
+  background: #94ACB6 url("../img/vydedlksohi.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.capture-page-advantages-list {
+  padding: 0;
+  margin: 0;
+  margin-top: 7px;
+  padding-top: 47px;
+}
+
+.capture-page-advantages-btn {
+  list-style-type: none;
+}
+
+.capture-page-advantages-btn a {
+  display: block;
+  width: 400px;
+  height: 30px;
+
+  margin-bottom: 18px;
+    padding: 20px;
+    padding-left: 107px;
+  background: linear-gradient(to right, #FFFFFF, rgba(255, 255, 255, 0) 100%);
+  text-decoration: none;
+  line-height: 29px;
+  color: #00A1E6;
+  font-size: 24px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 60px;
+  text-shadow: 1px 1px 3px #fff;
 }
 
 .sprite {
