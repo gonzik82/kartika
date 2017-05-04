@@ -118,13 +118,13 @@ html, body {
 }
 
 .capture-page-advantages-btn a {
+  position: relative;
   display: block;
   width: 400px;
   height: 30px;
-
   margin-bottom: 18px;
-    padding: 20px;
-    padding-left: 107px;
+  padding: 20px;
+  padding-left: 107px;
   background: linear-gradient(to right, #FFFFFF, rgba(255, 255, 255, 0) 100%);
   text-decoration: none;
   line-height: 29px;
@@ -137,16 +137,39 @@ html, body {
   text-shadow: 1px 1px 3px #fff;
 }
 
+.capture-page-advantages-btn a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 56px;
+}
+
+.free-shipping a::before {
+  width: 71px;
+  height: 45px;
+  background-position: -260px -126px;
+}
+
+.indent-seal a::before {
+  width: 60px;
+  height: 60px;
+  background-position: -240px -250px;
+}
+
+.lifetime-warranty a::before {
+  width: 75px;
+  height: 60px;
+  background-position: -5px -5px;
+}
+
 .sprite {
   background-image: url(spritesheet.png);
   background-repeat: no-repeat;
   display: block;
-}
-
-.sprite-100-percent {
-  width: 75px;
-  height: 60px;
-  background-position: -5px -5px;
 }
 
 .sprite-arabika-logo {
@@ -269,12 +292,6 @@ html, body {
   background-position: -173px -126px;
 }
 
-.sprite-free-shipping {
-  width: 71px;
-  height: 45px;
-  background-position: -260px -126px;
-}
-
 .sprite-good_doktor-ieu {
   width: 61px;
   height: 77px;
@@ -303,12 +320,6 @@ html, body {
   width: 77px;
   height: 38px;
   background-position: -5px -250px;
-}
-
-.sprite-new {
-  width: 60px;
-  height: 60px;
-  background-position: -240px -250px;
 }
 
 .sprite-next-u4983 {
