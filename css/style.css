@@ -166,6 +166,22 @@ html, body {
   background-position: -5px -5px;
 }
 
+.capture-page-disign-card-btn {
+  margin-top:50px;
+  display: block;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: #fff;
+  width: 200px;
+  height: 60px;
+  border-radius: 60px;
+  border: solid 2px #fff;
+  background: linear-gradient(to top, #FFFFFF, rgba(255, 255, 255, 0) 100%);
+
+
+}
+
 .sprite {
   background-image: url(spritesheet.png);
   background-repeat: no-repeat;
