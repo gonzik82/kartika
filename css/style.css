@@ -245,13 +245,23 @@ html, body {
   text-decoration: none;
   padding: 10px;
   display: block;
+  outline-color: #002dd0;
 }
 
-/*.item-navigation a:hover {
+.item-navigation a:hover {
+  position: relative;
+  top:1px;
+
+}
+
+.item-navigation a:active {
+  position: relative;
   color: #d4d4d4;
-  letter-spacing: normal;
-  padding: 10px 10px;
-}*/
+  top:1px;
+
+}
+
+
 
 .navigation {
   display: flex;
