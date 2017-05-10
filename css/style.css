@@ -230,6 +230,7 @@ html, body {
   font-weight: 300;
   width: 100%;
   letter-spacing: -1px;
+  position: absolute;
 }
 
 .item-navigation {
@@ -250,18 +251,14 @@ html, body {
 
 .item-navigation a:hover {
   position: relative;
-  top:1px;
-
+  top: 1px;
 }
 
 .item-navigation a:active {
   position: relative;
   color: #d4d4d4;
-  top:1px;
-
+  top: 1px;
 }
-
-
 
 .navigation {
   display: flex;
@@ -269,6 +266,83 @@ html, body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.promo-page-body {
+  display: flex;
+}
+
+.promo-page-title {
+  width: 517px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #FEED00;
+  background-color: transparent;
+  position: relative;
+  margin-top: 110px;
+  margin-left: 49px;
+}
+
+.promo-page-title b {
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #00A3D0;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 0;
+  right: 50%;
+  display: block;
+  width: 463px;
+  background-color: white;
+}
+
+.promo-page-title p {
+  margin: 0;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #00A3D0;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 44px;
+}
+
+.promo-page-title span {
+  margin: 0 auto;
+  margin-top: 15px;
+  display: block;
+  border: solid 4px #00A3D0;
+  width: 219px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  margin-top: 62px;
+  margin-left: 95px;
+}
+
+.timer-body {
+  background-color: #fff680;
+  min-height: 92px;
+  width: 343px;
+}
+
+.timer-clock {
+  display: flex;
+}
+
+.timer-title{
+  color: #666F85;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    margin-left: 98px;
+    padding-top: 1px;
 }
 
 .sprite {
