@@ -348,6 +348,19 @@ html, body {
   border-left-color: #fff680;
 }
 
+.timer-photo1 {
+  background-image: url(../img/akto.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 123px;
+  height: 81px;
+  position: absolute;
+  z-index: 9;
+  transform: rotate(-10deg);
+  top: 43px;
+  left: -47px;
+}
+
 .timer-photo2 {
   background-image: url(../img/sport.png);
   background-repeat: no-repeat;
@@ -383,8 +396,8 @@ html, body {
 .timer-clock-number {
   font-size: 44px;
   color: rgb(102, 102, 102);
-  width: 52px;
   text-align: center;
+  padding: 0 5px;
 }
 
 .timer-clock-colon {
@@ -404,6 +417,92 @@ html, body {
   font-size: 12px;
   color: rgb(199, 199, 199);
   font-family: "Open Sans";
+}
+
+.promo-page-leave-application-form {
+  width: 335px;
+  margin-left: 51px;
+  margin-top: 71px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: block;
+  padding: 10px;
+  position: relative;
+}
+
+.page-content-infrastructure-form {
+  background-color: #00a3d0;
+  color: #FFFFFF;
+  border: none;
+  padding-top: 31px;
+  margin: 0;
+  display: block;
+}
+
+.page-content-infrastructure-form-title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+  width: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 400;
+  position: absolute;
+  letter-spacing: -1px;
+}
+
+.page-content-infrastructure-form-title h2 {
+  line-height: 36px;
+  color: inherit;
+  font-size: 30px;
+  text-align: center;
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #00a3d0;
+  margin: 0;
+  padding: 0;
+}
+
+.page-content-infrastructure-form-title p {
+  padding: 0;
+  margin: 10px auto;
+  display: block;
+  width: 220px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.page-content-infrastructure-form input:first-of-type {
+  margin-top: 117px;
+}
+
+.page-content-infrastructure-form input {
+  background-color: #00a3d0;
+  color: #FFFFFF;
+  border: solid 2px #FFFFFF;
+  margin-left: 6px;
+  width: 250px;
+  height: 45px;
+  margin-bottom: 6px;
+  padding-left: 42px;
+
+
+}
+
+.page-content-infrastructure-form input::placeholder {
+  color: #FFFFFF;
+  font-size: 18px;
+    line-height: 17px;
+
+    font-family: open-sans, sans-serif;
+    font-weight: 400;
+
 }
 
 .sprite {
