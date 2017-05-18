@@ -491,18 +491,30 @@ html, body {
   height: 45px;
   margin-bottom: 6px;
   padding-left: 42px;
-
-
+  outline-color: blue;
 }
 
 .page-content-infrastructure-form input::placeholder {
   color: #FFFFFF;
   font-size: 18px;
-    line-height: 17px;
+  line-height: 17px;
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+}
 
-    font-family: open-sans, sans-serif;
-    font-weight: 400;
-
+.promo-page-leave-application-form-btn {
+  margin-top: 12px;
+  height: 70px;
+  border-radius: 100px;
+  border: solid 3px white;
+  margin-left: 10px;
+  width: 292px;
+  background: linear-gradient(to top, #f49b1f, #fbe721);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 19px;
+  outline-color: blue;
 }
 
 .sprite {
