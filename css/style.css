@@ -436,6 +436,7 @@ html, body {
   padding-top: 31px;
   margin: 0;
   display: block;
+  position: relative;
 }
 
 .page-content-infrastructure-form-title {
@@ -492,7 +493,16 @@ html, body {
   margin-bottom: 6px;
   padding-left: 42px;
   outline-color: blue;
+  position: relative;
 }
+
+.page-content-infrastructure-form input:hover,
+ .page-content-infrastructure-form input:focus{
+  transition: 0.2s;
+  transform: scale(1.03);
+}
+
+
 
 .page-content-infrastructure-form input::placeholder {
   color: #FFFFFF;
@@ -500,6 +510,46 @@ html, body {
   line-height: 17px;
   font-family: open-sans, sans-serif;
   font-weight: 400;
+}
+
+.promo-page-visually-hidden {
+  font-size: 0;
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+}
+
+.promo-page-visually-hidden::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  z-index: 10;
+  left: 20px;
+}
+
+
+.promo-page-leave-application-form-user::after {
+  width: 15px;
+  height: 22px;
+  background-position: -98px -97px;
+  top: -40px;
+}
+
+.promo-page-leave-application-form-phone-number::after {
+  width: 15px;
+  height: 30px;
+  background-position: -123px -97px;
+  top: -47px;
+}
+
+.promo-page-leave-application-form-user-mail::after {
+  width: 15px;
+  height: 19px;
+  background-position: -229px -97px;
+  top: -47px;
 }
 
 .promo-page-leave-application-form-btn {
@@ -515,6 +565,13 @@ html, body {
   font-weight: bold;
   font-size: 19px;
   outline-color: blue;
+}
+
+.promo-page-leave-application-form-btn:hover{
+  background: linear-gradient(to top, #fbe721, #fbe721);
+}
+.promo-page-leave-application-form-btn:active{
+  background: linear-gradient(to top, #f49b1f, #f49b1f);
 }
 
 .sprite {
@@ -607,28 +664,10 @@ html, body {
   background-position: -57px -97px;
 }
 
-.sprite-form-icons1 {
-  width: 15px;
-  height: 22px;
-  background-position: -98px -97px;
-}
-
-.sprite-form-icons2 {
-  width: 15px;
-  height: 30px;
-  background-position: -123px -97px;
-}
-
 .sprite-form-icons22 {
   width: 15px;
   height: 30px;
   background-position: -148px -97px;
-}
-
-.sprite-form-icons3 {
-  width: 15px;
-  height: 19px;
-  background-position: -229px -97px;
 }
 
 .sprite-form-icons32 {
