@@ -24,11 +24,7 @@
   background-position: -264px -5px;
 }
 
-.sprite-cash-icon {
-  width: 42px;
-  height: 42px;
-  background-position: -177px -57px;
-}
+
 
 .sprite-checkboxchecked {
   width: 16px;
@@ -72,11 +68,7 @@
   background-position: -266px -57px;
 }
 
-.sprite-credit-icon {
-  width: 42px;
-  height: 42px;
-  background-position: -5px -80px;
-}
+
 
 .sprite-facebook-icon {
   width: 31px;
@@ -228,32 +220,14 @@
   background-position: -196px -291px;
 }
 
-.sprite-stamp-icon {
-  width: 45px;
-  height: 45px;
-  background-position: -125px -323px;
-}
 
-.sprite-thumbs-up {
-  width: 42px;
-  height: 42px;
-  background-position: -180px -323px;
-}
 
-.sprite-track {
-  width: 42px;
-  height: 42px;
-  background-position: -232px -323px;
-}
+
+
+
 
 .sprite-vuuo-tgnyqg {
   width: 30px;
   height: 30px;
   background-position: -284px -323px;
-}
-
-.sprite-win-icon {
-  width: 42px;
-  height: 42px;
-  background-position: -324px -323px;
 }
