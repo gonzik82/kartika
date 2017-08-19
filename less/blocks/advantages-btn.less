@@ -1,0 +1,66 @@
+.advantages-btn {
+  padding: 0;
+  margin: 7px 0 0;
+  padding-top: 47px;
+}
+
+.advantages-btn__item {
+  list-style-type: none;
+}
+
+.advantages-btn__item a{
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 30px;
+  margin-bottom: 18px;
+  padding: 20px;
+  padding-left: 107px;
+  background: linear-gradient(to right, #FFFFFF, rgba(255, 255, 255, 0) 100%);
+  text-decoration: none;
+  line-height: 29px;
+  color: #00A1E6;
+  font-size: 24px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 60px;
+  text-shadow: 1px 1px 3px #fff;
+}
+
+.advantages-btn__item a:hover {
+  background: linear-gradient(to right, #feed00, rgba(255, 255, 255, 0) 100%);
+}
+
+.advantages-btn__item a:active {
+  background: linear-gradient(to right, #f3ea6d, rgba(255, 255, 255, 0) 100%);
+}
+
+.advantages-btn__item a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 56px;
+}
+
+.advantages-btn__item--free-shipping a::before {
+  width: 71px;
+  height: 45px;
+  background-position: -260px -126px;
+}
+
+.advantages-btn__item--indent-seal a::before {
+  width: 60px;
+  height: 60px;
+  background-position: -240px -250px;
+}
+
+.advantages-btn__item--lifetime-warranty a::before {
+  width: 75px;
+  height: 60px;
+  background-position: -5px -5px;
+}

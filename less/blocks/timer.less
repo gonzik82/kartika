@@ -1,0 +1,96 @@
+.timer{
+  margin-top: 62px;
+  margin-left: 95px;
+  position: relative;
+}
+
+.timer__body {
+  background-color: #fff680;
+  min-height: 92px;
+  width: 343px;
+  position: relative;
+}
+
+.timer__body::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  width: 0;
+  height: 0;
+  border: 46px solid transparent;
+  border-left-color: #fff680;
+}
+
+.timer__photo1 {
+  background-image: url(../img/akto.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 123px;
+  height: 81px;
+  position: absolute;
+  z-index: 9;
+  transform: rotate(-10deg);
+  top: 43px;
+  left: -47px;
+}
+
+.timer__photo2 {
+  background-image: url(../img/sport.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 123px;
+  height: 81px;
+  position: absolute;
+  z-index: 10;
+  transform: rotate(8deg);
+  top: -21px;
+  left: -60px;
+}
+
+.timer__clock {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2px;
+  margin-right: 7px;
+}
+
+.timer__title {
+  color: #666F85;
+  font-family: open-sans, sans-serif;
+  font-weight: 300;
+  margin-left: 98px;
+  padding-top: 1px;
+}
+
+.timer__clock-number p {
+  display: block;
+}
+
+.timer__clock-number {
+  font-size: 44px;
+  color: rgb(102, 102, 102);
+  text-align: center;
+  padding: 0 5px;
+}
+
+.timer__clock-colon {
+  font-size: 44px;
+  color: rgb(102, 102, 102);
+  text-align: center;
+}
+
+.timer__line-up {
+  margin: 0;
+  padding: 0;
+}
+
+.timer__line-down {
+  line-height: 1;
+  margin: 7px 0;
+  font-size: 12px;
+  color: rgb(199, 199, 199);
+  font-family: "Open Sans";
+}
