@@ -15,6 +15,42 @@
   margin: 0;
 }
 
-.types-products__gallery{
+.types-products__gallery {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.types-products__item {
+  width: 219px;
+  margin: 0 0 33px;
+}
+
+.types-products__item p {
+  display: block;
+  width: 207px;
+  height: 207px;
+  border: solid 6px @bg-blue;
+  overflow: hidden;
+  margin: 0;
+
+}
+
+.types-products__item img {
+  min-width: 306px;
+  transform: translateX(-50px);
+}
+
+.types-products__item figcaption {
+  display: block;
+  width: 200px;
+  line-height: 29px;
+  font-size: 24px;
+  text-align: center;
+  font-family: "open sans";
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-top: 20px;
 }
