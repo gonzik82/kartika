@@ -8,6 +8,11 @@
   position: relative;
 }
 
+.form-capture--free-card {
+  width: auto;
+  box-shadow: none;
+}
+
 .form-capture__text-hidden {
   font-size: 0;
   position: absolute;
@@ -17,13 +22,17 @@
 }
 
 .form-capture__inner {
-  background-color: #00a3d0;
+  background-color: @bg-blue;
   color: #FFFFFF;
   border: none;
   padding-top: 31px;
   margin: 0;
   display: block;
   position: relative;
+}
+
+.form-capture__inner--free-card {
+  padding-top: 36px;
 }
 
 .form-capture__title {
@@ -39,17 +48,27 @@
   letter-spacing: -1px;
 }
 
+.form-capture__title--free-card {
+  width: 700px;
+}
+
 .form-capture__title h2 {
   line-height: 36px;
   color: inherit;
   font-size: 30px;
   text-align: center;
-  font-family: open-sans, sans-serif;
+  font-family: "Open Sans";
   font-weight: 400;
   text-transform: uppercase;
-  background-color: #00a3d0;
+  background-color: @bg-blue;
   margin: 0;
   padding: 0;
+}
+
+.form-capture__title--free-card h2 {
+  line-height: 43px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .form-capture__title p {
@@ -61,9 +80,17 @@
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  font-family: open-sans, sans-serif;
+  font-family: "Open Sans";
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.form-capture__title--free-card p {
+  width: auto;
+  line-height: 30px;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: none;
 }
 
 .form-capture input:first-of-type {
@@ -71,7 +98,7 @@
 }
 
 .form-capture input {
-  background-color: #00a3d0;
+  background-color: @bg-blue;
   color: #FFFFFF;
   border: solid 2px #FFFFFF;
   margin-left: 6px;
@@ -142,6 +169,11 @@
   font-weight: bold;
   font-size: 19px;
   outline-color: blue;
+}
+
+.form-capture__btn--free-card {
+  margin: 0 auto;
+  width: 365px;
 }
 
 .form-capture__btn:hover {

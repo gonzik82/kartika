@@ -214,20 +214,20 @@
       </div>
     </section>
     <section class="order-free-card">
-      <div class="div-center">
-        <form class="order-free-card-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="order-free-card-form-cener">
-            <legend>
+      <div class="order-free-card__inner">
+        <form class="form-capture form-capture--free-card order-free-card__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form-capture__inner form-capture__inner--free-card">
+            <legend class="form-capture__title form-capture__title--free-card">
               <h2>Заказать бесплатную карту</h2>
               <p>Оставьте заявку и получите пробную карту в ПОДАРОК!</p>
             </legend>
-            <label for="user-name-order-free-card" class="visually-hidden">Ваше имя</label>
             <input id="user-name-order-free-card" type="text" name="user-name-order-free-card" placeholder="Ваше имя">
-            <label for="phone-number-order-free-card" class="visually-hidden">Номер телефона</label>
+            <label for="user-name-order-free-card" class="form-capture__text-hidden form-capture__icons form-capture__icons--user">Ваше имя</label>
             <input id="phone-number-order-free-card" type="tel" name="phone-number-order-free-card" placeholder="Номер телефона">
-            <label for="user-mail-order-free-card" class="visually-hidden">Электронная почта</label>
+            <label for="phone-number-order-free-card" class="form-capture__text-hidden form-capture__icons form-capture__icons--phone-number">Номер телефона</label>
             <input id="user-mail-order-free-card" type="email" name="user-mail-order-free-card" placeholder="Электронная почта">
-            <button class="btn order-free-card-form-btn" type="submit">Получить бесплатную карту</button>
+            <label for="user-mail-order-free-card" class="form-capture__text-hidden form-capture__icons form-capture__icons--user-mail">Электронная почта</label>
+            <button class="btn form-capture__btn form-capture__btn--free-card" type="submit">Получить бесплатную карту</button>
           </fieldset>
         </form>
       </div>
