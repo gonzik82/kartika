@@ -18,14 +18,6 @@
   background-position: -177px -5px;
 }
 
-.sprite-card {
-  width: 42px;
-  height: 42px;
-  background-position: -264px -5px;
-}
-
-
-
 .sprite-checkboxchecked {
   width: 16px;
   height: 16px;
@@ -130,29 +122,7 @@
   background-position: -5px -250px;
 }
 
-.sprite-next-u4983 {
-  width: 30px;
-  height: 45px;
-  background-position: -342px -5px;
-}
 
-.sprite-next-u4983-r {
-  width: 30px;
-  height: 45px;
-  background-position: -341px -60px;
-}
-
-.sprite-next-u7322 {
-  width: 30px;
-  height: 45px;
-  background-position: -341px -115px;
-}
-
-.sprite-next-u7322-r {
-  width: 30px;
-  height: 45px;
-  background-position: -341px -170px;
-}
 
 .sprite-ok-icon {
   width: 30px;
@@ -160,17 +130,9 @@
   background-position: -327px -225px;
 }
 
-.sprite-prev-u4986 {
-  width: 30px;
-  height: 48px;
-  background-position: -310px -265px;
-}
 
-.sprite-prev-u4986-r {
-  width: 30px;
-  height: 48px;
-  background-position: -5px -323px;
-}
+
+
 
 .sprite-prev-u7314 {
   width: 30px;
