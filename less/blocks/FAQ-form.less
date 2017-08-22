@@ -1,1 +1,48 @@
-.FAQ-form{}
+.FAQ-form input {
+  display: none;
+}
+
+.FAQ-form__wrapper {
+  border: none;
+}
+
+.FAQ-form__title {
+  line-height: 58px;
+  color: @bg-white;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.FAQ-form__question {
+  margin: 10px auto;
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  min-height: 30px;
+  width: 830px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.FAQ-form__answer {
+  transition: height 0.5s;
+  margin: 0 auto;
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  width: 830px;
+  padding-left: 10px;
+  overflow: hidden;
+  height: 0;
+}
+
+.FAQ-form__radio:checked+.FAQ-form__answer {
+  transition: height 0.5s;
+  height: 160px;
+}
