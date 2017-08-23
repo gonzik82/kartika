@@ -438,21 +438,21 @@
 
     </section>
     <section class="leave-request-main">
-      <div class="leave-request-main  div-center">
-        <form class="leave-request-main-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="leave-request-main-form-part1">
-            <h2>Оставьте заявку на расчет стоимости</h2>
-            <p>и наш менеджер рассчитает стоимость вашего заказа</p>
+      <div class="leave-request-main__inner">
+        <form class="leave-request-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="leave-request-form__part1 ">
+            <h2 class="leave-request-form__title">Оставьте заявку на расчет стоимости</h2>
+            <p class="leave-request-form__text">и наш менеджер рассчитает стоимость вашего заказа</p>
             <p class="leave-request-main-form-part1-ferst-line">
-              <label class="visually-hidden" for="leave-request-name">Введите имя</label>
+              <label class="leave-request-form__text-hidden" for="leave-request-name">Введите имя</label>
               <input type="text" name="leave-request-name" id="leave-request-name" placeholder="Введите имя">
-              <label class="visually-hidden" for="leave-request-tel">Введите телефон</label>
+              <label class="leave-request-form__text-hidden" for="leave-request-tel">Введите телефон</label>
               <input type="tel" name="leave-request-tel" id="leave-request-tel" placeholder="Введите телефон">
-              <label class="visually-hidden" for="leave-request-email">Введите электронную почту</label>
+              <label class="leave-request-form__text-hidden" for="leave-request-email">Введите электронную почту</label>
               <input type="email" name="leave-request-email" id="leave-request-email" placeholder="Введите электронную почту">
             </p>
             <p class="leave-request-main-form-part1-two-line">
-              <label class="visually-hidden" for="leave-request-plastic">Выберете пластик для ваших карт</label>
+              <label class="leave-request-form__text-hidden" for="leave-request-plastic">Выберете пластик для ваших карт</label>
               <select name="leave-request-plastic" id="leave-request-plastic">
                 <option disabled selected >Выберите пластик</option>
                 <option value="Белый пластик">Белый пластик</option>
@@ -460,14 +460,14 @@
                 <option value="Серебряный пластик">Серебряный пластик</option>
                 <option value="Прозрачный пластик">Прозрачный пластик</option>
               </select>
-              <label class="visually-hidden" for="leave-request-surface">Выберете покрытие карты</label>
+              <label class="leave-request-form__text-hidden" for="leave-request-surface">Выберете покрытие карты</label>
               <select name="leave-request-surface" id="leave-request-surface">
                 <option disabled selected >Выберите покрытие</option>
                 <option value="Глянцевое">Глянцевое</option>
                 <option value="Матовое">Матовое</option>
                 <option value="Шагрень">Шагрень</option>
               </select>
-              <label class="visually-hidden" for="leave-request-summ-card">Введите предполагаемый тираж</label>
+              <label class="leave-request-form__text-hidden" for="leave-request-summ-card">Введите предполагаемый тираж</label>
               <input type="number" name="leave-request-summ-card" id="leave-request-summ-card" placeholder="Предполагаемый тираж">
             </p>
             <p class="leave-request-main-form-part1-three-line">
