@@ -25,11 +25,16 @@
 .leave-request-form__text-hidden{
   .visuali-hidden;
 }
+.leave-request-form__line{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
 
 .leave-request-form__line input,
 .leave-request-form__line select, {
-  width: 271px;
-  min-height: 36px;
+  width: 287px;
+  min-height: 53px;
   color: #000000;
   font-family: open-sans, sans-serif;
   font-size: 18px;
@@ -38,6 +43,10 @@
   padding: 6px;
   background-color: @bg-blue;
   border: solid 2px #FFFFFF;
+}
+
+.leave-request-form__line option{
+  background-color: #FFFFFF;
 }
 
 .leave-request-form__line input::placeholder{
