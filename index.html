@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>Типография "Картика"</title>
@@ -469,22 +470,34 @@
               <label class="leave-request-form__text-hidden" for="leave-request-summ-card">Введите предполагаемый тираж</label>
               <input type="number" name="leave-request-summ-card" id="leave-request-summ-card" placeholder="Предполагаемый тираж">
             </p>
-            <p class="leave-request-form__line leave-request-form__line--radio">
-              <p class="leave-request-form__text">Выберите толщину карты:</p>
-              <input type="radio" name="card-thickness" id="card-thickness-046" value="0.46" checked>
-              <label class="check-box-card-thickness" for="card-thickness-046">0,46мм (тонкая карта)</label>
-              <input type="radio" name="card-thickness" id="card-thickness-076" value="0.76">
-              <label class="check-box-card-thickness" for="card-thickness-076">0,76мм (толстая карта)</label>
-              <p class="leave-request-form__text">Выберите тип печати:</p>
-              <input type="radio" name="print-type" id="print-type-44" value="4+4" checked>
-              <label class="check-box-print-type" for="print-type-44">4+4 (двухсторонняя)</label>
-              <input type="radio" name="print-type" id="print-type-40" value="4+0">
-              <label class="check-box-print-type" for="print-type-40">4+0 (односторонняя)</label>
-            </p>
+            <div class="leave-request-form__line-wrapper">
+              <div class="leave-request-form__line-inner">
+                <p class="leave-request-form__text">Выберите толщину карты:</p>
+                <label class="leave-request-form__check-box">
+                  <input type="radio" name="card-thickness" value="0.46" checked>
+                  0,46мм (тонкая карта)
+                </label>
+                <label class="leave-request-form__check-box">
+                  <input type="radio" name="card-thickness" id="card-thickness-076" value="0.76">
+                  0,76мм (толстая карта)
+                </label>
+              </div>
+              <div class="leave-request-form__line-inner">
+                <p class="leave-request-form__text">Выберите тип печати:</p>
+                <label class="leave-request-form__check-box">
+                  <input type="radio" name="print-type" value="4+4" checked>
+                  4+4 (двухсторонняя)
+                </label>
+                <label class="leave-request-form__check-box">
+                  <input type="radio" name="print-type" value="4+0">
+                  4+0 (односторонняя)
+                </label>
+              </div>
+            </div>
           </fieldset>
           <fieldset class="leave-request-form__part2">
             <legend>
-              <h3 class="leave-request-main-form-part2-title">Виды персонализации:</h3>
+              <h3 class="leave-request-form__title2">Виды персонализации:</h3>
             </legend>
             <p>
               <input type="checkbox" class="types-personalization" name="types-personalization-hico" id="types-personalization-hico">

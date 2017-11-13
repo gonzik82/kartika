@@ -32,12 +32,20 @@
   margin-bottom: 0;
 }
 
-.leave-request-form__line--radio{
+.leave-request-form__line-wrapper{
   display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.leave-request-form__line-inner{
+  display: flex;
+  flex-direction: column;
+  margin-right: 90px;
 }
 
 .leave-request-form__line input,
-.leave-request-form__line select, {
+.leave-request-form__line select{
   width: 273px;
   min-height: 33px;
   color: #000000;
@@ -69,4 +77,25 @@
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
+}
+
+.leave-request-form__check-box{
+  line-height: 18px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.leave-request-form__part2{
+  border: none;
+}
+
+.leave-request-form__title2{
+  line-height: 43px;
+  color: #FFFFFF;
+  font-size: 36px;
+  text-align: center;
+  font-family: pt-sans, sans-serif;
+  font-weight: 700;
 }
