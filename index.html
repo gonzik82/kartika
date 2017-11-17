@@ -501,8 +501,8 @@
             </legend>
             <div class="types-personalization__wrapper">
               <div class="types-personalization__inner   types-personalization__inner--hico">
-                  <input type="checkbox" class="types-personalization__input" name="types-personalization-hico" id="types-personalization-hico">
-                  <label class="types-personalization__label" for="types-personalization-hico">Магнитная полоса</label>
+                <input type="checkbox" class="types-personalization__input" name="types-personalization-hico" id="types-personalization-hico">
+                <label class="types-personalization__label" for="types-personalization-hico">Магнитная полоса</label>
               </div>
               <div class="types-personalization__inner   types-personalization__inner--barcode">
                 <input type="checkbox" class="types-personalization__input" name="types-personalization-barcode" id="types-personalization-barcode">
@@ -532,25 +532,35 @@
                 <input type="checkbox" class="types-personalization__input" name="types-personalization-indent" id="types-personalization-indent">
                 <label class="types-personalization__label" for="types-personalization-indent">Индент печать</label>
               </div>
-            </div>
-              <p><span class="smartcard-title">Наличие чипа:</span></p>
-            <div class="leave-request-form__part2-wrapper">
-                <input type="radio" class="types-personalization-smartcard" name="smartcard" value="without" id="smartcard-without">
-                <label class="radio-types-personalization-smartcard  without" for="smartcard-without">Без чипа</label>
-                <input type="radio" class="types-personalization-smartcard" name="smartcard" value="emarine" id="smartcard-emarine">
-                <label class="radio-types-personalization-smartcard  emarine" for="smartcard-emarine">EMarine</label>
-                <input type="radio" class="types-personalization-smartcard" name="smartcard" value="mifare" id="smartcard-mifare">
-                <label class="radio-types-personalization-smartcard mifare" for="smartcard-mifare">Mifare</label>
-                <input type="radio" class="types-personalization-smartcard" name="smartcard" value="icode" id="smartcard-icode">
-                <label class="radio-types-personalization-smartcard icode" for="smartcard-icode">icode</label>
+              <div class="types-personalization__chip">
+                <p class="types-personalization__chip-title">Наличие чипа:</p>
+                <div class="types-personalization__chip-wrapper">
+                  <label class="types-personalization__smartcard">
+                    <input type="radio" name="smartcard" value="without" checked>
+                    Без чипа
+                  </label>
+                  <label class="types-personalization__smartcard">
+                    <input type="radio" name="smartcard" value="emarine">
+                    EMarine
+                  </label>
+                  <label class="types-personalization__smartcard">
+                    <input type="radio" name="smartcard" value="mifare">
+                    Mifare
+                  </label>
+                  <label class="types-personalization__smartcard">
+                    <input type="radio" name="smartcard" value="icode">
+                    Icode
+                  </label>
+                </div>
               </div>
               <p>
                 <input type="file" class="types-personalization" name="maket" id="card-maket">
               </p>
-              <p>
-                <textarea name="types-personalization-text-user" id="types-personalization-text-user" rows="8" cols="80" placeholder="Коментарий к заказу"></textarea>
-              </p>
-              <input type="submit" name="submit" value="Расчитать стоимость ">
+            </div>
+            <p>
+              <textarea name="types-personalization-text-user" id="types-personalization-text-user" rows="8" cols="80" placeholder="Коментарий к заказу"></textarea>
+            </p>
+            <input type="submit" name="submit" value="Расчитать стоимость ">
           </fieldset>
         </form>
       </div>
