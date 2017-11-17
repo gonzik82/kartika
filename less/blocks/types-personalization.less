@@ -1,0 +1,49 @@
+.types-personalization {}
+
+.types-personalization__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.types-personalization__label {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 30px;
+  margin-left: 10px;
+  position: relative;
+  width: 165px;
+
+
+}
+
+.types-personalization__label::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #afafaf;
+  background-color: #FFFFFF;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.types-personalization__label::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 10px;
+  border: solid 2px black;
+  border-top-color:transparent;
+  border-left-color:transparent;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-60%) rotate(45deg);
+}
+
+.types-personalization__input {
+  .visuali-hidden;
+}
