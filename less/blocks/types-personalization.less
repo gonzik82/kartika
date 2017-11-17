@@ -5,16 +5,65 @@
   flex-wrap: wrap;
 }
 
+.types-personalization__inner{
+  width: 200px;
+  padding-top: 100px;
+  padding-left: 30px;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-72%);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--hico::after{
+    background-image: url(../img/hico.jpg);
+  }
+
+  &--barcode::after{
+    background-image: url(../img/barcode1.jpg);
+  }
+
+  &--scratch::after{
+    background-image: url(../img/scratchstrip.jpg);
+  }
+  &--emboss::after{
+    background-image: url(../img/emboussr31.jpg);
+  }
+  &--signature-band::after{
+    background-image: url(../img/signaturestrip.jpg);
+  }
+  &--variable-numbering::after{
+    background-image: url(../img/embossr31.jpg);
+  }
+  &--sublimation::after{
+    background-image: url(../img/barcode15.jpg);
+  }
+
+  &--indent::after{
+    background-image: url(../img/indent.jpg);
+  }
+
+}
+
+
+
 .types-personalization__label {
   color: #000000;
   font-size: 18px;
+  line-height: 1;
   font-weight: 400;
-  padding-left: 30px;
-  margin-left: 10px;
   position: relative;
-  width: 165px;
-
-
+  vertical-align: bottom;
+  text-align: center;
 }
 
 .types-personalization__label::before{
@@ -25,7 +74,7 @@
   height: 16px;
   border: solid 2px #afafaf;
   background-color: #FFFFFF;
-  left: 0;
+  left: -30px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -39,7 +88,7 @@
   border: solid 2px black;
   border-top-color:transparent;
   border-left-color:transparent;
-  left: 6px;
+  left: -24px;
   top: 50%;
   transform: translateY(-60%) rotate(45deg);
 }
