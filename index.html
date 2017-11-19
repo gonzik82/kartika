@@ -502,7 +502,7 @@
             <div class="types-personalization__wrapper">
               <div class="types-personalization__inner   types-personalization__inner--hico">
                 <input type="checkbox" class="types-personalization__input" name="types-personalization-hico" id="types-personalization-hico">
-                <label class="types-personalization__label" for="types-personalization-hico">Магнитная полоса</label>
+                <label class="types-personalization__label" for="types-personalization-hico" tabindex="0">Магнитная полоса</label>
               </div>
               <div class="types-personalization__inner   types-personalization__inner--barcode">
                 <input type="checkbox" class="types-personalization__input" name="types-personalization-barcode" id="types-personalization-barcode">
@@ -526,7 +526,7 @@
               </div>
               <div class="types-personalization__inner   types-personalization__inner--sublimation">
                 <input type="checkbox" class="types-personalization__input" name="types-personalization-sublimation" id="types-personalization-sublimation">
-                <label class="types-personalization__label" for="types-personalization-sublimation">Сублимационная печать</label>
+                <label class="types-personalization__label" for="types-personalization-sublimation">Сублимацион- ная печать</label>
               </div>
               <div class="types-personalization__inner types-personalization__inner--indent">
                 <input type="checkbox" class="types-personalization__input" name="types-personalization-indent" id="types-personalization-indent">
@@ -553,14 +553,13 @@
                   </label>
                 </div>
               </div>
-              <p>
-                <input type="file" class="types-personalization" name="maket" id="card-maket">
-              </p>
+              <label class="types-personalization__layout">
+                <input type="file" class="types-personalization__file-input" name="maket" id="card-maket">
+                <span>Загрузить макет...</span>
+              </label>
             </div>
-            <p>
-              <textarea name="types-personalization-text-user" id="types-personalization-text-user" rows="8" cols="80" placeholder="Коментарий к заказу"></textarea>
-            </p>
-            <input type="submit" name="submit" value="Расчитать стоимость ">
+            <textarea class="types-personalization__text-user" name="types-personalization-text-user" id="types-personalization-text-user" rows="8" cols="80" placeholder="Коментарий к заказу"></textarea>
+            <input class="btn btn--leave-request-form" type="submit" name="submit" value="Расчитать стоимость ">
           </fieldset>
         </form>
       </div>
@@ -596,6 +595,8 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript" charset="utf-8" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/filelayout.js"></script>
 </body>
 
 </html>

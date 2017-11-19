@@ -1,8 +1,6 @@
-.leave-request-form__part1{
-  border:none;
+.leave-request-form__part1 {
+  border: none;
 }
-
-
 
 .leave-request-form__title {
   line-height: 43px;
@@ -11,6 +9,7 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 19px;
+  text-transform: uppercase;
 }
 
 .leave-request-form__title-text {
@@ -22,30 +21,32 @@
   margin-bottom: 41px;
 }
 
-.leave-request-form__text-hidden{
+.leave-request-form__text-hidden {
   .visuali-hidden;
 }
-.leave-request-form__line{
+
+.leave-request-form__line {
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
   margin-bottom: 0;
 }
 
-.leave-request-form__line-wrapper{
+.leave-request-form__line-wrapper {
   display: flex;
   justify-content: flex-start;
   margin-top: 10px;
 }
 
-.leave-request-form__line-inner{
+.leave-request-form__line-inner {
   display: flex;
   flex-direction: column;
   margin-right: 90px;
+  width: 250px;
 }
 
 .leave-request-form__line input,
-.leave-request-form__line select{
+.leave-request-form__line select {
   width: 273px;
   min-height: 33px;
   color: #000000;
@@ -56,22 +57,27 @@
   padding: 6px;
   background-color: @bg-blue;
   border: solid 2px #FFFFFF;
+  &:focus,
+  &:hover {
+    transition: 0.2s;
+    transform: scale(1.03);
+  }
 }
 
-.leave-request-form__line select{
+.leave-request-form__line select {
   width: 287px;
-
+  cursor: pointer;
 }
 
-.leave-request-form__line option{
+.leave-request-form__line option {
   background-color: #FFFFFF;
 }
 
-.leave-request-form__line input::placeholder{
+.leave-request-form__line input::placeholder {
   color: #000000;
 }
 
-.leave-request-form__text{
+.leave-request-form__text {
   margin: 0;
   color: #FFFFFF;
   font-size: 18px;
@@ -79,32 +85,33 @@
   font-weight: 400;
 }
 
-.leave-request-form__check-box{
+.leave-request-form__check-box {
   line-height: 18px;
   color: #000000;
   font-size: 18px;
   font-weight: 400;
   margin-top: 10px;
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+  }
 }
 
-.leave-request-form__part2{
+.leave-request-form__part2 {
   border: none;
 }
 
-.leave-request-form__title2{
+.leave-request-form__title2 {
   line-height: 43px;
   color: #FFFFFF;
   font-size: 36px;
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
-  margin-top: 38px;
-
-
+  margin: 38px 0 0;
 }
 
-.leave-request-form__legend{
+.leave-request-form__legend {
   text-align: center;
   margin: 0;
 }
