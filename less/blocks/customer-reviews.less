@@ -113,13 +113,24 @@
   left: 0;
 }
 
-.customer-reviews__user--m2::before {
-  background-position: -171px -106px;
-}
+.customer-reviews__user {
+  &--m2::before {
+    background-position: -171px -106px;
+  }
 
-.customer-reviews__user--automag::before {
-  background-image: url("../img/icons/avtomag.svg");
-  background-size: contain;
+  &--automag::before {
+    background-image: url("../img/icons/avtomag.svg");
+    background-size: contain;
+  }
+
+  &--gooddoctor::before {
+    background-position: -71px -148px;
+    background-size: 311px auto;
+  }
+  &--arabika::before {
+    background-position: -71px -1px;
+    background-size: 311px auto;
+  }
 }
 
 .customer-reviews__date {
