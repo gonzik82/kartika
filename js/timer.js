@@ -5,10 +5,23 @@
 
 
 function initializeTimer() {
-	var endDate = new Date(2020,9,31,8,31); // получаем дату истечения таймера
+	var endDate = new Date();
+  var day = new Date();
+  var daySumm = 2;  // задаем переменную для интервала таймера + 2 дня
+  day = day.getDay(); // получаем текущий день недели
+    if (day%2 == 0) { // Проверка текущего дня на четность нечетность если день четный то таймер устанавливается на + 1 день
+      daySumm=1;
+  };
+  endDate.setDate(endDate.getDate() + daySumm);
+  endDate.setHours(23);
+  endDate.setMinutes(59);
+  endDate.setSeconds(59);
   console.log("дата окончания",endDate);
 	var currentDate = new Date(); // получаем текущую дату
+
+    console.log("сsdf",endDate);
 	var seconds = (endDate-currentDate) / 1000; // определяем количество секунд до истечения таймера
+
   console.log("сикунды",seconds);
 	if (seconds > 0) { // проверка - истекла ли дата обратного отсчета
 		var minutes = seconds/60; // определяем количество минут до истечения таймера
@@ -28,7 +41,11 @@ function initializeTimer() {
 			  if (minutes == 0) { // если минуты закончились то
 				  if (hours == 0) { // если часы закончились то
             if (days == 0) { // если часы закончились то
-					         showMessage(timerId); // выводим сообщение об окончании отсчета
+					         // showMessage(timerId); // выводим сообщение об окончании отсчета
+                  days = 2;// уменьшаем кол-во дней
+       					  hours = 23; // обновляем часы
+       					  minutes = 59; // обновляем минуты
+       					  seconds = 59; // обновляем секунды
             }
             else {
               days--;// уменьшаем кол-во дней
