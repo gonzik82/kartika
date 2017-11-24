@@ -1,6 +1,5 @@
 jQuery(window).scroll(function() {
     var the_top = jQuery(document).scrollTop();
-    console.log("Скрол",the_top);
     if (the_top > 667) {
         jQuery('.main-navigation').addClass('main-navigation--fixed');
     }
