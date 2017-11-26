@@ -16,13 +16,12 @@ function initializeTimer() {
   endDate.setHours(23);
   endDate.setMinutes(59);
   endDate.setSeconds(59);
-  console.log("дата окончания",endDate);
-	var currentDate = new Date(); // получаем текущую дату
+  var currentDate = new Date(); // получаем текущую дату
 
     console.log("сsdf",endDate);
 	var seconds = (endDate-currentDate) / 1000; // определяем количество секунд до истечения таймера
 
-  console.log("сикунды",seconds);
+
 	if (seconds > 0) { // проверка - истекла ли дата обратного отсчета
 		var minutes = seconds/60; // определяем количество минут до истечения таймера
     var hours = minutes/60; // определяем количество часов до истечения таймера
