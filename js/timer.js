@@ -17,8 +17,6 @@ function initializeTimer() {
   endDate.setMinutes(59);
   endDate.setSeconds(59);
   var currentDate = new Date(); // получаем текущую дату
-
-    console.log("сsdf",endDate);
 	var seconds = (endDate-currentDate) / 1000; // определяем количество секунд до истечения таймера
 
 
