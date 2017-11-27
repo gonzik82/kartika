@@ -23,15 +23,19 @@ $(document).ready(function(){
 		event.preventDefault();
 
 		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
+    $(".FAQ-form__wrapper input:checked").prop('selected',false);
+		var id  = $(this).attr('href'), top;
 
 		//узнаем высоту от начала страницы до блока на который ссылается якорь
 
-			top = $(id).offset().top;
-      $('id~input').prop('checked',true);
+		top = $(id).offset().top;
+    id = id + " + input"
+    console.log("ID", id);
 
-      top = top - 50;
+    $(id).prop('checked',true);
 
+    top = top - 50;
+    console.log("top",top);
 		//анимируем переход на расстояние - top за 1500 мс
 		$('body,html').animate({scrollTop: top}, 1000);
 	});

@@ -78,12 +78,12 @@
       </div>
     </nav>
 
-    <section  class="promo-page">
-      <div  class="promo-page__inner">
-        <div  class="promo-page__left">
-          <div  class="promo-page__title">
+    <section class="promo-page">
+      <div class="promo-page__inner">
+        <div class="promo-page__left">
+          <div class="promo-page__title">
             <h2 class="promo-page__text-hidden">Специальная акция типографии "Картика"</h2>
-            <b  id="promo-page">Только 3 дня!</b>
+            <b id="promo-page">Только 3 дня!</b>
             <p>при заказе карт вы получите дизайн-макет<span>в подарок</span></p>
           </div>
           <div class="timer ">
@@ -360,7 +360,7 @@
             <input class="FAQ-form__radio" type="radio" name="radio-faq" id="faq-calculate">
             <p class="FAQ-form__answer">Стоимость считается исходя из общего количества карт в заказе, независимо от количества макетов.</p>
             <label id="free-shipping" class="FAQ-form__question" for="faq-delivery">2. Как осуществляется доставка карт?</label>
-            <input  class="FAQ-form__radio" type="radio" name="radio-faq" id="faq-delivery">
+            <input class="FAQ-form__radio" type="radio" name="radio-faq" id="faq-delivery">
             <p class="FAQ-form__answer">Доставка карт осуществляется бесплатно до склада транспортной компании в вашем городе.</p>
             <label class="FAQ-form__question" for="faq-44">3. Что означает «4+4» и «4+0»?</label>
             <input class="FAQ-form__radio" type="radio" name="radio-faq" id="faq-44">
@@ -384,10 +384,13 @@
             <label class="FAQ-form__question" for="faq-use">8. Как можно применить дисконтные карты, если нет оборудования для считывания магнитных полос или штрих-кодов?</label>
             <input class="FAQ-form__radio" type="radio" name="radio-faq" id="faq-use">
             <p class="FAQ-form__answer">Мы рекомендуем сделать дисконтные карты с фиксированной скидкой, например: 5%, 7%, 10%, и нумерацией, для учета выданных карт клиентам.</p>
-            <label class="FAQ-form__question" for="faq-indent">9. Что такое индент-печать?</label>
+            <label class="FAQ-form__question" for="faq-indent" id="indent-seal">9. Что такое индент-печать?</label>
             <input class="FAQ-form__radio" type="radio" name="radio-faq" id="faq-indent">
             <p class="FAQ-form__answer">Индент-печать - процесс, обратный эмбоссированию. Символы при индент-печати не выдавливаются, а, наоборот, вдавливаются в пластик. При этом, в отличии от эмбоссирования, на задней стороне карты не остается никаких следов. Индент-печать отличается
               очень высокой износостойкостью.</p>
+            <label class="FAQ-form__question" for="faq-warranty" id="lifetime-warranty">10. Что значит пожизенная гарантия?</label>
+            <input class="FAQ-form__radio" type="radio" name="radio-faq" id="faq-warranty">
+            <p class="FAQ-form__answer">Мы обязуемся исправить любое количество бракованных карт пока хотя-бы одна карта находиться у вас на руках.</p>
           </fieldset>
         </form>
       </div>
@@ -437,7 +440,7 @@
       </div>
 
     </section>
-    <section  class="leave-request-main">
+    <section class="leave-request-main">
       <div class="leave-request-main__inner">
         <form class="leave-request-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset id="request-for-settleme" class="leave-request-form__part1 ">
@@ -576,8 +579,7 @@
           <li class="cocial-btn__item cocial-btn__item--vk"><a href="http://vk.com/t_kartika" target="_blank"><span class="cocial-btn__visually-hidden">Наша страничка В Контакте</span></a></li>
           <li class="cocial-btn__item cocial-btn__item--insta"><a href="https://www.instagram.com/brn_kartika" target="_blank"><span class="cocial-btn__visually-hidden">Наша страничка  Инстаграмм</span></a></li>
           <li class="cocial-btn__item cocial-btn__item--ok"><a href="http://ok.ru/kartika" target="_blank"><span class="cocial-btn__visually-hidden">Наша страничка Онокласники</span></a></li>
-          <li class="cocial-btn__item cocial-btn__item--fb" cocial-btn__item--fb><a href="https://www.facebook.com/kartika.barnaul" target="_blank"><span class="cocial-btn__visually-hidden">Наша страничка Фейсбук</span></a></lfb
-        </ul>
+          <li class="cocial-btn__item cocial-btn__item--fb" cocial-btn__item--fb><a href="https://www.facebook.com/kartika.barnaul" target="_blank"><span class="cocial-btn__visually-hidden">Наша страничка Фейсбук</span></a></lfb </ul>
       </div>
     </div>
   </section>
@@ -587,7 +589,7 @@
         <a><img src="img/kartikalogosmall.png" alt="Логотип типографии «Картика»" width=197 height=55></a>
       </div>
       <div class="main-footer__privacypolicy">
-        <div id="fz_wrap" ></div>
+        <div id="fz_wrap"></div>
         <p>Все права защищены|© Типография «КАРТИКА»</p>
       </div>
       <div class="main-footer__right">
@@ -598,7 +600,16 @@
   <script type="text/javascript" charset="utf-8" src="js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/filelayout.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/move.js"></script>
-  <script>(function(){var script = document.createElement('script');script.type = 'text/javascript';script.async = true;script.charset = 'utf-8';script.src = 'https://152фз.рф/widget/e7891dca8b038199ca96b7c656d599f9';document.getElementsByTagName('head')[0].appendChild(script);})();</script>
+  <script>
+    (function() {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.charset = 'utf-8';
+      script.src = 'https://152фз.рф/widget/e7891dca8b038199ca96b7c656d599f9';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+  </script>
   <script type="text/javascript" charset="utf-8" src="js/timer.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/skrollfixed.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/menuskroll.js"></script>
