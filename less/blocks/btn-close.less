@@ -1,0 +1,27 @@
+.btn-close {
+  position: absolute;
+  background-color: transparent;
+  border-color: transparent;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+
+
+  & svg {
+    width: 30px;
+    height: 30px;
+    stroke: black;
+    fill: white;
+  }
+
+  &:hover svg ,
+  &:focus svg {
+    fill: @bg-blue;
+    stroke: @bg-blue;
+  }
+
+  &:active svg {
+    fill: #48d6fd;
+    stroke: #48d6fd;
+  }
+}
