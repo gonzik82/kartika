@@ -1,3 +1,21 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  20% {
+    transform: translateY(-80%);
+  }
+
+  90% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .request-call {
   display: none;
   position: fixed;
@@ -15,12 +33,18 @@
 }
 
 .request-call__wrapper {
+  display: none;
   position: relative;
   width: 380px;
   background-color: #FFFFFF;
   border: solid 5px #e1e1e1;
   padding: 10px 20px;
 
+}
+
+.request-call__wrapper--show{
+    display: block;
+    animation: bounce 0.6s;
 }
 
 .request-call__title {

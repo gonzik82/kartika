@@ -9,6 +9,7 @@ var closes = popup.querySelector(".btn-close"),
 link.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.add("request-call--show");
+  $(".request-call__wrapper").addClass("request-call__wrapper--show");
   user.focus();
 
 });
@@ -30,6 +31,7 @@ closes.addEventListener("click", function(event) {
   event.preventDefault();
   if (popup.classList.contains("request-call--show")) {
     popup.classList.remove("request-call--show");
+
   }
 });
 
