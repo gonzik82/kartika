@@ -4,28 +4,34 @@ echo "Привет, меня зовут Иван" ;
 print_r(array_values($_POST));
 echo "<br>";
 print_r($_POST);
-$fio = $_POST['user'];
-$phone = $_POST['phone'];
-$checkbox = $_POST['personal-data'];
-$formname = $_POST['formname'];
 
-$fio = htmlspecialchars($fio);
-$phone = htmlspecialchars($phone);
 
-$fio = urldecode($fio);
-$phone = urldecode($phone);
+$content = file_get_contents('http://kardexpress22.mawisoft.ru/salescontrol/endPoint/orders?name=Петр&phone=00012345');
+echo $content;
 
-$fio = trim($fio);
-$phone = trim($phone);
-
-$emailAddress="annapolyanina@mail.ru";
-
-$referer = $_SERVER['HTTP_REFERER'];
-echo $fio;
-echo "<br>";
-echo $phone;
-echo "<br>";
-echo $referer;
+//
+// $fio = $_POST['user'];
+// $phone = $_POST['phone'];
+// $checkbox = $_POST['personal-data'];
+// $formname = $_POST['formname'];
+//
+// $fio = htmlspecialchars($fio);
+// $phone = htmlspecialchars($phone);
+//
+// $fio = urldecode($fio);
+// $phone = urldecode($phone);
+//
+// $fio = trim($fio);
+// $phone = trim($phone);
+//
+// $emailAddress="annapolyanina@mail.ru";
+//
+// $referer = $_SERVER['HTTP_REFERER'];
+// echo $fio;
+// echo "<br>";
+// echo $phone;
+// echo "<br>";
+// echo $referer;
 
 // include "libmail.php"; //Класс для работы с мейлом через smtp SSL/TSL
 // $m= new Mail("utf-8"); // начинаем
