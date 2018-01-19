@@ -4,9 +4,16 @@ echo "Привет, меня зовут Иван" ;
 print_r(array_values($_POST));
 echo "<br>";
 print_r($_POST);
+$fio = $_POST['user-name'];
+$phone = $_POST['phone-number'];
+$mail = $_POST['user-mail'];
+echo "<br>";
+echo "Имя Пользователя $fio";
+echo "Номер телефона $phone";
+echo "Электронна почта  $mail";
 
 
-$content = file_get_contents('http://kardexpress22.mawisoft.ru/salescontrol/endPoint/orders?name=Петр&phone=00012345');
+$content = file_get_contents('http://kardexpress22.mawisoft.ru/salescontrol/endPoint/orders?name='.$fio.'&phone='.$phone);
 echo $content;
 
 //
