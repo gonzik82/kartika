@@ -1,24 +1,20 @@
+
 <?php
-$username = "info@t-kartika.ru";
-$password = "ma0eh12k";
-$host_api = "https://kardexpress22.mawisoft.ru/integration/set/event?object.ownerName=client&object.ownerId=16920&object.eventTypeId=1004&object.userId=50&object.message=222222333&object.important";
-$param = 123;
+echo "Привет, меня зовут Иван" ;
+print_r(array_values($_POST));
+echo "<br>";
+print_r($_POST);
+$fio = $_POST['user-name'];
+$phone = $_POST['phone-number'];
+$mail = $_POST['user-mail'];
+echo "<br>";
+echo "Имя Пользователя $fio";
+echo "Номер телефона $phone";
+echo "Электронна почта  $mail";
 
-// авторизация
-$curl = curl_init($host_api);
-curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-curl_setopt($curl, CURLOPT_USERPWD, $username . ":" . $password);
-// get запрос
-curl_setopt($curl, CURLOPT_URL, "$host_api");
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-$result = curl_exec($curl);
-// вывести результат
-var_dump($result);
 
-print_r($result);
-
-// $content = file_get_contents('http://kardexpress22.mawisoft.ru/integration/set/event?object.ownerName=client&object.ownerId=16920&object.eventTypeId=1004&object.userId=50&object.message=222222333&object.important'); создание события для клиента с id 16920
-// echo $content;
+$content = file_get_contents('https://kardexpress22.mawisoft.ru/salescontrol/endPoint/orders?name='.$fio.'&phone='.$phone.'&email='.$mail);
+echo $content;
 
 //
 // $fio = $_POST['user'];
