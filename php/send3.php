@@ -9,11 +9,11 @@ $EventType=1004; //1004 id цели созвониться
 $SourceId=253; //253 id Источник Привлечения Лендинг
 $PositionID=50; //50 id Должности ЛПР при необходимости поставить другую
 $user_pass = "info@t-kartika.ru:ma0eh12k";
-$host_api = "https://kardexpress22.mawisoft.ru/integration/set";
+$host_api = "https://kardexpress22.mawisoft.ru";
 
-$UserName = $_POST['user-name'];
-$UserPhone = $_POST['phone-number'];
-$UserMail = $_POST['user-mail'];
+// $UserName = $_POST['user-name'];
+// $UserPhone = $_POST['phone-number'];
+// $UserMail = $_POST['user-mail'];
 
 
   echo "<br>POST<br>";
@@ -31,7 +31,8 @@ $UserMail=str_replace (' ','',$UserMail);
 
 
 function RequestServer($host_api, $user_pass, $param ){
-  $curl = curl_init($host_api);
+  $host=$host_api."/integration/init";
+  $curl = curl_init($host);
   curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
   curl_setopt($curl, CURLOPT_USERPWD, $user_pass);
   // get запрос
@@ -43,17 +44,25 @@ function RequestServer($host_api, $user_pass, $param ){
   return $result;
 }
 
-$AddUsr= "/client?object.name=$UserName&sourceId=$SourceId&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
+$CheckPhone="/integration/init";
 
-$Request = RequestServer($host_api, $user_pass, $AddUsr);
+$XMLRequest = RequestServer($host_api, $user_pass, $CheckPhone);
 
-$AddComent ="/event?object.ownerName=client&object.ownerId=$Request&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
+$CheckPhone="/integration/admin/clientsXML.jsp?phone=9139267622";
 
-RequestServer($host_api, $user_pass, $AddComent);
+$XMLRequest = RequestServer($host_api, $user_pass, $CheckPhone);
 
-$AddPerson = "/person?object.clientId=$Request&object.name=$UserName&object.categoryId=$PositionID&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
-
-RequestServer($host_api, $user_pass, $AddPerson);
+// $AddUsr= "/integration/set/client?object.name=$UserName&sourceId=$SourceId&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
+//
+// $Request = RequestServer($host_api, $user_pass, $AddUsr);
+//
+// $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$Request&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
+//
+// RequestServer($host_api, $user_pass, $AddComent);
+//
+// $AddPerson = "/integration/set/person?object.clientId=$Request&object.name=$UserName&object.categoryId=$PositionID&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
+//
+// RequestServer($host_api, $user_pass, $AddPerson);
 
 // $content = file_get_contents('http://kardexpress22.mawisoft.ru/integration/set/event?object.ownerName=client&object.ownerId=16920&object.eventTypeId=1004&object.userId=50&object.message=222222333&object.important'); создание события для клиента с id 16920
 // echo $content;
