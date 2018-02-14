@@ -30,23 +30,48 @@ $UserMail=str_replace (' ','',$UserMail);
 
 
 
-function RequestServer($host_api, $user_pass, $param ){
-  $host=$host_api."/integration/init";
-  $curl = curl_init($host);
-  curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-  curl_setopt($curl, CURLOPT_USERPWD, $user_pass);
-  // get запрос
-  curl_setopt($curl, CURLOPT_URL, $host_api . $param);
+function RequestServer($host_api, $user_pass, $cookie=''){
+
+  $curl = curl_init();
+
+  curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC); // определяем тип авторизации
+  curl_setopt($curl, CURLOPT_USERPWD, $user_pass);  // Авторизация
+
+  curl_setopt($curl, CURLOPT_URL, $host_api.'/integration/init'); // get запрос
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-  $result = curl_exec($curl);
-  // вывести результат
-  var_dump($result);
-  return $result;
+
+  curl_setopt($curl, CURLOPT_HEADER, true);
+  if (strlen($cookie)>0)
+    curl_setopt($curl, CURLOPT_COOKIE,$cookie);
+  curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);
+
+  $data = curl_exec($curl);
+  $header=substr($data,0,curl_getinfo($curl,CURLINFO_HEADER_SIZE));
+  $body=substr($data,curl_getinfo($curl,CURLINFO_HEADER_SIZE));
+  preg_match_all("/Set-Cookie: (.*?)=(.*?);/i",$header,$res);
+  $cookie='';
+  foreach ($res[1] as $key => $value) {
+    $cookie.= $value.'='.$res[2][$key].'; ';
+  };
+
+  if ($data === FALSE) {
+    //Тут-то мы о ней и скажем
+    echo "cURL Error: " . curl_error($curl);
+    return;
+  }
+
+  //Получаем информацию о запросе
+  $info = curl_getinfo($curl);
+  //Выводим какую-то инфомрацию
+  echo 'Запрос выполнился за  ' . $info['total_time'] . ' сек. к URL: ' . $info['url'].'</br>';
+  var_dump($data);
+  echo "</br>";
+
+  curl_close($curl);
+    return $cookie;
+
 }
 
-$CheckPhone="/integration/init";
-
-$XMLRequest = RequestServer($host_api, $user_pass, $CheckPhone);
 
 $CheckPhone="/integration/admin/clientsXML.jsp?phone=9139267622";
 
