@@ -1,7 +1,7 @@
 <?php
 
 $UserName="Тестовый Клиент цууцу";
-$UserPhone="+7983 256 98 5";
+$UserPhone="913215";
 $UserMail="sdfsdf@sd df.ru";
 $UserMess="!!Новая заявка с сайта!!";
 $ManagerID=50; //50 id Елфимов Павел Николаевич Менеджер для планироания задачи
@@ -30,21 +30,17 @@ $UserMail=str_replace (' ','',$UserMail);
 
 
 
-function RequestServer($host_api, $user_pass, $cookie=''){
+function InitServer($host_api, $user_pass, $cookie=''){
 
   $curl = curl_init();
-
-  curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC); // определяем тип авторизации
-  curl_setopt($curl, CURLOPT_USERPWD, $user_pass);  // Авторизация
-
-  curl_setopt($curl, CURLOPT_URL, $host_api.'/integration/init'); // get запрос
+  curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+  curl_setopt($curl, CURLOPT_USERPWD, $user_pass);
+  curl_setopt($curl, CURLOPT_URL, $host_api.'/integration/init');
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
   curl_setopt($curl, CURLOPT_HEADER, true);
   if (strlen($cookie)>0)
     curl_setopt($curl, CURLOPT_COOKIE,$cookie);
   curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);
-
   $data = curl_exec($curl);
   $header=substr($data,0,curl_getinfo($curl,CURLINFO_HEADER_SIZE));
   $body=substr($data,curl_getinfo($curl,CURLINFO_HEADER_SIZE));
@@ -64,18 +60,46 @@ function RequestServer($host_api, $user_pass, $cookie=''){
   $info = curl_getinfo($curl);
   //Выводим какую-то инфомрацию
   echo 'Запрос выполнился за  ' . $info['total_time'] . ' сек. к URL: ' . $info['url'].'</br>';
-  var_dump($data);
+  var_dump($body);
+  echo "</br>";
+  var_dump($cookie);
   echo "</br>";
 
   curl_close($curl);
     return $cookie;
+}
 
+function RequestServer($host_api, $user_pass, $param, $cookie){
+  $curl = curl_init();
+
+  curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+  curl_setopt($curl, CURLOPT_USERPWD, $user_pass);
+    curl_setopt($curl, CURLOPT_COOKIE,$cookie);
+  // get запрос
+  curl_setopt($curl, CURLOPT_URL, $host_api . $param);
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  $result = curl_exec($curl);
+  // вывести результат
+  curl_close($curl);
+  var_dump($result);
+
+  return $result;
 }
 
 
-$CheckPhone="/integration/admin/clientsXML.jsp?phone=9139267622";
+$cookie = InitServer($host_api, $user_pass);
 
-$XMLRequest = RequestServer($host_api, $user_pass, $CheckPhone);
+echo'Куки' . $cookie;
+echo'</br>';
+$CheckPhone="/integration/admin/clientsXML.jsp?phone=$UserPhone";
+
+$XMLRequest=RequestServer($host_api, $user_pass, $CheckPhone, $cookie);
+$XMLRequest = simplexml_load_string($XMLRequest);
+foreach ($XMLRequest->client  as $client ) {
+    echo "$client->contact<br>";
+    echo "<br>";
+}
+
 
 // $AddUsr= "/integration/set/client?object.name=$UserName&sourceId=$SourceId&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
 //
