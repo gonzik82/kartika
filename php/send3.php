@@ -1,7 +1,7 @@
 <?php
 
 $UserName="Тестовый Клиент цууцу";
-$UserPhone="913215";
+$UserPhone="226824";
 $UserMail="sdfsdf@sd df.ru";
 $UserMess="!!Новая заявка с сайта!!";
 $ManagerID=50; //50 id Елфимов Павел Николаевич Менеджер для планироания задачи
@@ -81,7 +81,7 @@ function RequestServer($host_api, $user_pass, $param, $cookie){
   $result = curl_exec($curl);
   // вывести результат
   curl_close($curl);
-  var_dump($result);
+
 
   return $result;
 }
@@ -95,8 +95,14 @@ $CheckPhone="/integration/admin/clientsXML.jsp?phone=$UserPhone";
 
 $XMLRequest=RequestServer($host_api, $user_pass, $CheckPhone, $cookie);
 $XMLRequest = simplexml_load_string($XMLRequest);
+
 foreach ($XMLRequest->client  as $client ) {
+
     echo "$client->contact<br>";
+    $atr=$client->attributes();
+    print_r($atr);
+    echo "<br>";
+    echo $atr['id'];
     echo "<br>";
 }
 
