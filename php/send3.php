@@ -1,7 +1,7 @@
 <?php
 
 $UserName="Тестовый Клиент цууцу";
-$UserPhone="226824";
+$UserPhone="(3852) 57−15−06";
 $UserMail="sdfsdf@sd df.ru";
 $UserMess="!!Новая заявка с сайта!!";
 $ManagerID=50; //50 id Елфимов Павел Николаевич Менеджер для планироания задачи
@@ -26,6 +26,7 @@ $UserName=str_replace (' ','_',$UserName);
 $UserMess=str_replace (' ','_',$UserMess);
 $UserPhone=str_replace (' ','-',$UserPhone);
 $UserMail=str_replace (' ','',$UserMail);
+
 
 
 
@@ -81,8 +82,6 @@ function RequestServer($host_api, $user_pass, $param, $cookie){
   $result = curl_exec($curl);
   // вывести результат
   curl_close($curl);
-
-
   return $result;
 }
 
@@ -92,18 +91,25 @@ $cookie = InitServer($host_api, $user_pass);
 echo'Куки' . $cookie;
 echo'</br>';
 $CheckPhone="/integration/admin/clientsXML.jsp?phone=$UserPhone";
-
 $XMLRequest=RequestServer($host_api, $user_pass, $CheckPhone, $cookie);
 $XMLRequest = simplexml_load_string($XMLRequest);
 
-foreach ($XMLRequest->client  as $client ) {
+if ($XMLRequest->client != FALSE) {
+  foreach ($XMLRequest->client  as $client ) {
+    foreach ($client->contact as $contact) {
+      echo "$contact<br>";
+      $contact->attributes();
+      print_r($atr);
+      echo "<br>";
+      echo $atr['id'];
+      echo "<br>";
+    }
 
-    echo "$client->contact<br>";
-    $atr=$client->attributes();
-    print_r($atr);
-    echo "<br>";
-    echo $atr['id'];
-    echo "<br>";
+  }
+}
+  else {
+  echo "Нет данных о телефоне ";
+  return;
 }
 
 
