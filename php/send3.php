@@ -1,9 +1,9 @@
 <?php
 
-$UserName="Тестовый Клиент цууцу";
-$UserPhone="(3852) 57−15−06";
+$UserName="Тестовый Клиент цууцуsdfdf";
+$UserPhone="3852770670889";
 $UserMail="sdfsdf@sd df.ru";
-$UserMess="!!Новая заявка с сайта!!";
+$UserMess="!!Новая заявка с сайта!! от ".$UserName." телефон ".$UserPhone. "Адрес почты ".$UserMail;
 $ManagerID=50; //50 id Елфимов Павел Николаевич Менеджер для планироания задачи
 $EventType=1004; //1004 id цели созвониться
 $SourceId=253; //253 id Источник Привлечения Лендинг
@@ -52,7 +52,7 @@ function InitServer($host_api, $user_pass, $cookie=''){
   };
 
   if ($data === FALSE) {
-    //Тут-то мы о ней и скажем
+
     echo "cURL Error: " . curl_error($curl);
     return;
   }
@@ -62,12 +62,9 @@ function InitServer($host_api, $user_pass, $cookie=''){
   //Выводим какую-то инфомрацию
   echo 'Запрос выполнился за  ' . $info['total_time'] . ' сек. к URL: ' . $info['url'].'</br>';
   var_dump($body);
-  echo "</br>";
-  var_dump($cookie);
-  echo "</br>";
-
+  echo "<br>";
   curl_close($curl);
-    return $cookie;
+  return $cookie;
 }
 
 function RequestServer($host_api, $user_pass, $param, $cookie){
@@ -88,28 +85,82 @@ function RequestServer($host_api, $user_pass, $param, $cookie){
 
 $cookie = InitServer($host_api, $user_pass);
 
-echo'Куки' . $cookie;
-echo'</br>';
 $CheckPhone="/integration/admin/clientsXML.jsp?phone=$UserPhone";
 $XMLRequest=RequestServer($host_api, $user_pass, $CheckPhone, $cookie);
 $XMLRequest = simplexml_load_string($XMLRequest);
-
+$IDFlags=FALSE;
+$len=strlen($UserPhone);
+if ($len>10) {
+  $ShortPhone =substr($UserPhone, $len-10);
+} else {
+  $ShortPhone = $UserPhone;
+}
 if ($XMLRequest->client != FALSE) {
   foreach ($XMLRequest->client  as $client ) {
-    foreach ($client->contact as $contact) {
-      echo "$contact<br>";
-      $contact->attributes();
-      print_r($atr);
-      echo "<br>";
-      echo $atr['id'];
-      echo "<br>";
+    if ($client->person != FALSE) {
+      foreach ($client->person->contact as $contact) {
+        if ($contact->attributes()['type-code']=='phone') {
+          $contact=preg_replace('/[^0-9]/', '', $contact);
+          $len=strlen($contact);
+          if ($len>10) {
+            $contact =substr($contact, $len-10);
+          }
+          echo " Это телефон Раздел контактные лицабез доп символов $contact<br>";
+          if ($contact ==$ShortPhone) {
+            $IDFlags=true;
+            echo " Это ИСКОМЫЙ ТЕЛЕФОН !!!<br>";
+          }
+        }
+      }
+    } else {
+      echo "Нет данных в разделе контактные лица<br>";
     }
 
+    if ($client->contact!= FALSE) {
+      foreach ($client->contact as $contact) {
+        if ($contact->attributes()['type-code']=='phone') {
+          $contact=preg_replace('/[^0-9]/', '', $contact);
+          $len=strlen($contact);
+          if ($len>10) {
+            $contact =substr($contact, $len-10);
+          }
+          echo " Это телефон без доп символов $contact<br>";
+          if ($contact == $ShortPhone) {
+            $IDFlags=true;
+            echo " Это ИСКОМЫЙ ТЕЛЕФОН !!!<br>";
+          }
+        }
+      }
+    } else {
+      echo "Нет контактных данных в разделе клиент";
+    }
+    $atr=$client->attributes();
+    echo "<br>";
+    echo "ID  клиента ".$atr['id'];
+    echo "<br>";
+    if ($IDFlags == true) {
+      $IdClient=$atr['id'];
+      echo "ID Искомого клиента $IdClient";
+      $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$IdClient&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
+
+      RequestServer($host_api, $user_pass, $AddComent, $cookie);
+    } else {
+      echo "Совпадений не найдено ";
+    }
   }
-}
-  else {
-  echo "Нет данных о телефоне ";
-  return;
+} else {
+    echo "Нет данных о телефоне Создаем нового клиента ";
+    $AddUsr= "/integration/set/client?object.name=$UserName&sourceId=$SourceId&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
+
+    $Request = RequestServer($host_api, $user_pass, $AddUsr, $cookie);
+
+    $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$Request&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
+
+    RequestServer($host_api, $user_pass, $AddComent, $cookie);
+
+    $AddPerson = "/integration/set/person?object.clientId=$Request&object.name=$UserName&object.categoryId=$PositionID&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
+
+    RequestServer($host_api, $user_pass, $AddPerson, $cookie);
 }
 
 
