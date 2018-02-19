@@ -17,11 +17,13 @@ $UserMail = $_POST['user-mail'];
 $UserMess="!!Новая заявка с сайта!! от ".$UserName." телефон "
   .$UserPhone. "Адрес почты ".$UserMail;
 
-
+$UserMess="!!Новая_заявка_с_сайта!!";
 foreach($_POST as $key => $value)
   {
      echo "\$_POST[".$key."] = ".$value."<br>";
+     $UserMess=$UserMess."[".$key."=".$value."],";
   }
+  echo $UserMess;
 
 
 $UserName=str_replace (' ','_',$UserName);
@@ -40,7 +42,8 @@ if ($posYandex === false) {
     if ($posGoogle === false) {
       echo "Строка '$findGoogle' не найдена в строке '$UTMsource'";
     } else {
-    $SourceId=351;
+      echo "Строка '$findGoogle' найдена в строке '$UTMsource'";
+      $SourceId=351;
     }
 
 } else {

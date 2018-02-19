@@ -456,7 +456,7 @@
             </p>
             <p class="leave-request-form__line">
               <label class="leave-request-form__text-hidden" for="leave-request-plastic">Выберете пластик для ваших карт</label>
-              <select name="leave-request-plastic" id="leave-request-plastic">
+              <select name="plastic" id="leave-request-plastic">
                 <option disabled selected >Выберите пластик</option>
                 <option value="Белый пластик">Белый пластик</option>
                 <option value="Золотой пластик">Золотой пластик</option>
@@ -464,14 +464,14 @@
                 <option value="Прозрачный пластик">Прозрачный пластик</option>
               </select>
               <label class="leave-request-form__text-hidden" for="leave-request-surface">Выберете покрытие карты</label>
-              <select name="leave-request-surface" id="leave-request-surface">
+              <select name="surface" id="leave-request-surface">
                 <option disabled selected >Выберите покрытие</option>
                 <option value="Глянцевое">Глянцевое</option>
                 <option value="Матовое">Матовое</option>
                 <option value="Шагрень">Шагрень</option>
               </select>
               <label class="leave-request-form__text-hidden" for="leave-request-summ-card">Введите предполагаемый тираж</label>
-              <input type="number" name="leave-request-summ-card" id="leave-request-summ-card" placeholder="Предполагаемый тираж">
+              <input type="number" name="summ-card" id="leave-request-summ-card" placeholder="Предполагаемый тираж" required>
             </p>
             <div class="leave-request-form__line-wrapper">
               <div class="leave-request-form__line-inner">
@@ -504,35 +504,35 @@
             </legend>
             <div class="types-personalization__wrapper">
               <div class="types-personalization__inner   types-personalization__inner--hico">
-                <input type="checkbox" class="types-personalization__input" name="types-personalization-hico" id="types-personalization-hico">
+                <input type="checkbox" class="types-personalization__input" name="hico" id="types-personalization-hico">
                 <label class="types-personalization__label" for="types-personalization-hico" tabindex="0">Магнитная полоса</label>
               </div>
               <div class="types-personalization__inner   types-personalization__inner--barcode">
-                <input type="checkbox" class="types-personalization__input" name="types-personalization-barcode" id="types-personalization-barcode">
+                <input type="checkbox" class="types-personalization__input" name="barcode" id="types-personalization-barcode">
                 <label class="types-personalization__label" for="types-personalization-barcode">Штрих-код</label>
               </div>
               <div class="types-personalization__inner   types-personalization__inner--scratch">
-                <input type="checkbox" class="types-personalization__input" name="types-personalization-scratch" id="types-personalization-scratch">
+                <input type="checkbox" class="types-personalization__input" name="scratch" id="types-personalization-scratch">
                 <label class="types-personalization__label" for="types-personalization-scratch">Скретч-полоса</label>
               </div>
               <div class="types-personalization__inner types-personalization__inner--emboss">
-                <input type="checkbox" class="types-personalization__input" name="types-personalization-emboss" id="types-personalization-emboss">
+                <input type="checkbox" class="types-personalization__input" name="emboss" id="types-personalization-emboss">
                 <label class="types-personalization__label" for="types-personalization-emboss">Эмбоссирование</label>
               </div>
               <div class="types-personalization__inner types-personalization__inner--signature-band">
-                <input type="checkbox" class="types-personalization__input" name="types-personalization-signature-band" id="types-personalization-signature-band">
+                <input type="checkbox" class="types-personalization__input" name="signature-band" id="types-personalization-signature-band">
                 <label class="types-personalization__label" for="types-personalization-signature-band"><span>Полоса для подписи</span></label>
               </div>
               <div class="types-personalization__inner   types-personalization__inner--variable-numbering">
-                <input type="checkbox" class="types-personalization__input" name="types-personalization-variable-numbering" id="types-personalization-variable-numbering">
+                <input type="checkbox" class="types-personalization__input" name="variable-numbering" id="types-personalization-variable-numbering">
                 <label class="types-personalization__label" for="types-personalization-variable-numbering">Переменная нумерация</label>
               </div>
               <div class="types-personalization__inner   types-personalization__inner--sublimation">
-                <input type="checkbox" class="types-personalization__input" name="types-personalization-sublimation" id="types-personalization-sublimation">
+                <input type="checkbox" class="types-personalization__input" name="sublimation" id="types-personalization-sublimation">
                 <label class="types-personalization__label" for="types-personalization-sublimation">Сублимацион- ная печать</label>
               </div>
               <div class="types-personalization__inner types-personalization__inner--indent">
-                <input type="checkbox" class="types-personalization__input" name="types-personalization-indent" id="types-personalization-indent">
+                <input type="checkbox" class="types-personalization__input" name="indent" id="types-personalization-indent">
                 <label class="types-personalization__label" for="types-personalization-indent">Индент печать</label>
               </div>
               <div class="types-personalization__chip">
@@ -556,12 +556,12 @@
                   </label>
                 </div>
               </div>
-              <label class="types-personalization__layout">
+              <!-- <label class="types-personalization__layout">
                 <input type="file" class="types-personalization__file-input" name="maket" id="card-maket">
                 <span>Загрузить макет...</span>
-              </label>
+              </label> -->
             </div>
-            <textarea class="types-personalization__text-user" name="types-personalization-text-user" id="types-personalization-text-user" rows="8" cols="80" placeholder="Коментарий к заказу"></textarea>
+            <textarea class="types-personalization__text-user" name="text-user" id="types-personalization-text-user" rows="8" cols="80" placeholder="Коментарий к заказу"></textarea>
             <input class="btn btn--leave-request-form" type="submit" name="submit" value="Расчитать стоимость ">
           </fieldset>
         </form>
