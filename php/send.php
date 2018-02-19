@@ -3,7 +3,6 @@
 $UserName="Тестовый Клиент цууцуsdfdf";
 $UserPhone="3852770670889";
 $UserMail="sdfsdf@sd df.ru";
-$UserMess="!!Новая заявка с сайта!! от ".$UserName." телефон ".$UserPhone. "Адрес почты ".$UserMail;
 $ManagerID=50; //50 id Елфимов Павел Николаевич Менеджер для планироания задачи
 $EventType=1004; //1004 id цели созвониться
 $SourceId=253; //253 id Источник Привлечения Лендинг
@@ -15,20 +14,39 @@ $UserName = $_POST['user-name'];
 $UserPhone = $_POST['phone-number'];
 $UserMail = $_POST['user-mail'];
 
-$UserMess="!!Новая заявка с сайта!! от ".$UserName." телефон ".$UserPhone. "Адрес почты ".$UserMail;
+$UserMess="!!Новая заявка с сайта!! от ".$UserName." телефон "
+  .$UserPhone. "Адрес почты ".$UserMail;
 
-  echo "<br>POST<br>";
-  foreach($_POST as $key => $value)
+
+foreach($_POST as $key => $value)
   {
      echo "\$_POST[".$key."] = ".$value."<br>";
   }
+
 
 $UserName=str_replace (' ','_',$UserName);
 $UserMess=str_replace (' ','_',$UserMess);
 $UserPhone=str_replace (' ','-',$UserPhone);
 $UserMail=str_replace (' ','',$UserMail);
 
+echo $_SERVER['HTTP_REFERER'];
+$UTMsource= $_SERVER['HTTP_REFERER'];
+$findYandex   = 'utm_source=yandex';
+$findGoogle   = 'utm_source=google';
+$posYandex = strpos($UTMsource, $findYandex);
+$posGoogle = strpos($UTMsource, $findGoogle);
+if ($posYandex === false) {
+    echo "Строка '$findYandex' не найдена в строке '$UTMsource'";
+    if ($posGoogle === false) {
+      echo "Строка '$findGoogle' не найдена в строке '$UTMsource'";
+    } else {
+    $SourceId=351;
+    }
 
+} else {
+    echo "Строка '$findme' найдена в строке '$mystring'";
+    $SourceId=257;
+}
 
 
 
