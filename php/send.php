@@ -44,7 +44,7 @@ if ($posYandex === false) {
     }
 
 } else {
-    echo "Строка '$findme' найдена в строке '$mystring'";
+    echo "Строка '$findYandex' найдена в строке '$UTMsource'";
     $SourceId=257;
 }
 
