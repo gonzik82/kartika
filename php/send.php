@@ -23,6 +23,7 @@ foreach($_POST as $key => $value)
      echo "\$_POST[".$key."] = ".$value."<br>";
      $UserMess=$UserMess."[".$key."=".$value."],";
   }
+
   echo $UserMess;
 
 
@@ -82,7 +83,7 @@ function InitServer($host_api, $user_pass, $cookie=''){
   //Получаем информацию о запросе
   $info = curl_getinfo($curl);
   //Выводим какую-то инфомрацию
-  echo 'Запрос выполнился за  ' . $info['total_time'] . ' сек. к URL: ' . $info['url'].'</br>';
+  echo 'Запрос выполнился за '. $info['total_time']. ' сек. к URL: '. $info['url'].'</br>';
   var_dump($body);
   echo "<br>";
   curl_close($curl);

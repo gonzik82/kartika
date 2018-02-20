@@ -562,7 +562,7 @@
               </label> -->
             </div>
             <textarea class="types-personalization__text-user" name="text-user" id="types-personalization-text-user" rows="8" cols="80" placeholder="Коментарий к заказу"></textarea>
-            <input class="btn btn--leave-request-form" type="submit" name="submit" value="Расчитать стоимость ">
+            <input class="btn btn--leave-request-form" type="submit" value="Расчитать стоимость ">
           </fieldset>
         </form>
       </div>
@@ -616,6 +616,21 @@
         <label for="request-call-phone-number" class="request-call__text-hidden request-call__icons request-call__icons--phone-number" required>Номер телефона</label>
         <input id="request-call-user-mail" type="email" name="user-mail" placeholder="Электронная почта" required>
         <label for="request-call-user-mail" class="request-call__text-hidden request-call__icons request-call__icons--user-mail">Электронная почта</label>
+        <input class="request-call__checkbox-input" type="checkbox" name="check-politik" value="enabled" id="request-call__checkbox">
+        <label class="request-call__checkbox" for="request-call__checkbox">
+
+            <p class="request-call__text request-call__text--checkbox">
+              Я соглашаюсь на передачу персональных данных согласно
+              <a class="request-call__text request-call__text--link"
+                href="https://152фз.рф/get_terms/e7891dca8b038199ca96b7c656d599f9">
+                пользовательскому соглашению
+              </a> и
+              <a class="request-call__text request-call__text--link"
+                href="https://152фз.рф/get_prv/e7891dca8b038199ca96b7c656d599f9">
+                политике конфиденциальности данного сайта
+              </a>
+            </p>
+        </label>
         <button class="btn btn--request-call" type="submit">Оставить заявку</button>
       </form>
     </div>
