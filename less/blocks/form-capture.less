@@ -66,6 +66,24 @@
   text-transform: uppercase;
 }
 
+.form-capture__text {
+  color: #FFFFFF;
+  font-size: 9px;
+  line-height: 12px;
+  text-align: left;
+  font-family: "Open Sans";
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+
+  &--link{
+
+  }
+  &--link:hover{
+    color: @bg-dark-red;
+  }
+}
+
 .form-capture input:first-of-type {
   margin-top: 117px;
 }
@@ -155,12 +173,13 @@
 
 .form-capture__checkbox-input{
   .visuali-hidden;
-  bottom: 120px;
-    left: 20px;
+
 }
 .form-capture__checkbox{
     position: relative;
     padding-left: 20px;
+    display: block;
+
 }
 
 .form-capture__checkbox::before {
