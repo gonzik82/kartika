@@ -143,3 +143,55 @@
 .form-capture-free-card__btn:active {
   background: linear-gradient(to top, #f49b1f, #f49b1f);
 }
+
+.form-capture-free-card__text{
+    color: @bg-white;
+    font-size: 12px;
+    line-height: 12px;
+
+  &--link:hover{
+    color: @bg-dark-red;
+
+  }
+}
+
+.form-capture-free-card__checkbox-input{
+  .visuali-hidden;
+  margin-top: 22px;
+
+}
+.form-capture-free-card__checkbox{
+    position: relative;
+    padding-left: 35px;
+    display: block;
+    width: 500px;
+
+}
+
+.form-capture-free-card__checkbox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #afafaf;
+  background-color: #FFFFFF;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-capture-free-card__checkbox-input:checked~.form-capture-free-card__checkbox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 10px;
+  border: solid 2px black;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-60%) rotate(45deg);
+}
