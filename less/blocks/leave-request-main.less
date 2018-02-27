@@ -12,3 +12,57 @@
   .container;
 
 }
+
+.leave-request-main__text{
+    color: @bg-white;
+    font-size: 12px;
+    line-height: 12px;
+
+  &--link:hover{
+    color: @bg-dark-red;
+
+  }
+}
+
+.leave-request-main__checkbox-input{
+  .visuali-hidden;
+  margin-top: 22px;
+
+}
+.leave-request-main__checkbox{
+    position: relative;
+    padding-left: 35px;
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.leave-request-main__checkbox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #afafaf;
+  background-color: #FFFFFF;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.leave-request-main__checkbox-input:checked~.leave-request-main__checkbox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 10px;
+  border: solid 2px black;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-60%) rotate(45deg);
+}

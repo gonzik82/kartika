@@ -236,11 +236,11 @@
             <div class="form-capture-free-card__wrapper">
               <label class="form-capture-free-card__icons form-capture-free-card__icons--user">
                 <span class="form-capture-free-card__text-hidden">Ваше имя</span>
-                <input type="text" name="user-name" placeholder="Ваше имя">
+                <input type="text" name="user-name" placeholder="Ваше имя" required>
               </label>
               <label class="form-capture-free-card__icons form-capture-free-card__icons--phone-number">
                 <span class="form-capture-free-card__text-hidden">Номер телефона</span>
-                <input type="tel" name="phone-number" placeholder="Номер телефона">
+                <input type="tel" name="phone-number" placeholder="Номер телефона" required>
               </label>
               <label class="form-capture-free-card__icons form-capture-free-card__icons--user-mail">
                 <span class="form-capture-free-card__text-hidden">Электронная почта</span>
@@ -248,18 +248,18 @@
               </label>
             </div>
             <input class="form-capture-free-card__checkbox-input" type="checkbox" name="check-politik" value="enabled" id="form-capture-free-card__checkbox" required>
-              <label class="form-capture-free-card__checkbox" for="form-capture-free-card__checkbox">
-                  <p class="form-capture-free-card__text form-capture-free-card__text--checkbox">
-                    Я соглашаюсь на передачу персональных данных согласно
-                    <a class="form-capture-free-card__text form-capture-free-card__text--link"
+            <label class="form-capture-free-card__checkbox" for="form-capture-free-card__checkbox">
+                <p class="form-capture-free-card__text form-capture-free-card__text--checkbox">
+                  Я соглашаюсь на передачу персональных данных согласно
+                  <a class="form-capture-free-card__text form-capture-free-card__text--link"
                     href="https://152фз.рф/get_terms/e7891dca8b038199ca96b7c656d599f9">
-                      пользовательскому соглашению
-                    </a>и
-                    <a class="form-capture-free-card__text form-capture-free-card__text--link"   href="https://152фз.рф/get_prv/e7891dca8b038199ca96b7c656d599f9">
-                      политике конфиденциальности
-                    </a>данного сайта
-                  </p>
-              </label>
+                    пользовательскому соглашению
+                  </a>и
+                  <a class="form-capture-free-card__text form-capture-free-card__text--link"   href="https://152фз.рф/get_prv/e7891dca8b038199ca96b7c656d599f9">
+                    политике конфиденциальности
+                  </a>данного сайта
+                </p>
+            </label>
             <button class="btn form-capture-free-card__btn" type="submit">Получить бесплатную карту</button>
           </fieldset>
         </form>
@@ -473,9 +473,9 @@
             <p class="leave-request-form__title-text">и наш менеджер рассчитает стоимость вашего заказа</p>
             <p class="leave-request-form__line">
               <label class="leave-request-form__text-hidden" for="leave-request-name">Введите имя</label>
-              <input type="text" name="user-name" id="leave-request-name" placeholder="Введите имя">
+              <input type="text" name="user-name" id="leave-request-name" placeholder="Введите имя" required>
               <label class="leave-request-form__text-hidden" for="leave-request-tel">Введите телефон</label>
-              <input type="tel" name="phone-number" id="leave-request-tel" placeholder="Введите телефон">
+              <input type="tel" name="phone-number" id="leave-request-tel" placeholder="Введите телефон" required>
               <label class="leave-request-form__text-hidden" for="leave-request-email">Введите электронную почту</label>
               <input type="email" name="user-mail" id="leave-request-email" placeholder="Введите электронную почту">
             </p>
@@ -587,6 +587,19 @@
               </label> -->
             </div>
             <textarea class="types-personalization__text-user" name="text-user" id="types-personalization-text-user" rows="8" cols="80" placeholder="Коментарий к заказу"></textarea>
+            <input class="leave-request-main__checkbox-input" type="checkbox" name="check-politik" value="enabled" id="leave-request-main__checkbox-input" required>
+            <label class="leave-request-main__checkbox" for="leave-request-main__checkbox-input">
+                <p class="leave-request-main__text leave-request-main__text--checkbox">
+                  Я соглашаюсь на передачу персональных данных согласно
+                  <a class="leave-request-main__text leave-request-main__text--link"
+                    href="https://152фз.рф/get_terms/e7891dca8b038199ca96b7c656d599f9">
+                    пользовательскому соглашению
+                  </a>и
+                  <a class="leave-request-main__text leave-request-main__text--link"   href="https://152фз.рф/get_prv/e7891dca8b038199ca96b7c656d599f9">
+                    политике конфиденциальности
+                  </a>данного сайта
+                </p>
+            </label>
             <input class="btn btn--leave-request-form" type="submit" value="Расчитать стоимость ">
           </fieldset>
         </form>
@@ -635,9 +648,9 @@
           </g>
           </svg>
         </button>
-        <input id="request-call-user-name" type="text" name="user-name" placeholder="Ваше имя">
+        <input id="request-call-user-name" type="text" name="user-name" placeholder="Ваше имя" required>
         <label for="request-call-user-name" class="request-call__text-hidden request-call__icons request-call__icons--user" required>Ваше имя</label>
-        <input id="request-call-phone-number" type="tel" name="phone-number" placeholder="Номер телефона">
+        <input id="request-call-phone-number" type="tel" name="phone-number" placeholder="Номер телефона" required>
         <label for="request-call-phone-number" class="request-call__text-hidden request-call__icons request-call__icons--phone-number" required>Номер телефона</label>
         <input id="request-call-user-mail" type="email" name="user-mail" placeholder="Электронная почта" required>
         <label for="request-call-user-mail" class="request-call__text-hidden request-call__icons request-call__icons--user-mail">Электронная почта</label>
