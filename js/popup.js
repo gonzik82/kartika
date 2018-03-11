@@ -1,9 +1,13 @@
 var link = document.querySelector(".main-header__contact-btn");
 var index;
 var popup = document.querySelector(".request-call");
+var popupThanks = document.querySelector(".thanks-call");
 var user = popup.querySelector("[name=request-call-user-name]");
 var closes = popup.querySelector(".btn-close"),
   close;
+
+var closesThanks = popupThanks.querySelector(".btn-close");
+var btnClosesThanks = popupThanks.querySelector(".btn--thanks-call");
 
 
 link.addEventListener("click", function(event) {
@@ -31,15 +35,32 @@ closes.addEventListener("click", function(event) {
   event.preventDefault();
   if (popup.classList.contains("request-call--show")) {
     popup.classList.remove("request-call--show");
-
   }
 });
 
+
+
+closesThanks.addEventListener("click", function(event) {
+  event.preventDefault();
+    if (popupThanks.classList.contains("thanks-call--show")) {
+      popupThanks.classList.remove("thanks-call--show");
+  }
+});
+
+btnClosesThanks.addEventListener("click", function(event) {
+  event.preventDefault();
+    if (popupThanks.classList.contains("thanks-call--show")) {
+      popupThanks.classList.remove("thanks-call--show");
+  }
+});
 
 window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
     if (popup.classList.contains("request-call--show")) {
       popup.classList.remove("request-call--show");
+    }
+    if (popupThanks.classList.contains("thanks-call--show")) {
+        popupThanks.classList.remove("thanks-call--show");
     }
   }
 });

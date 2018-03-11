@@ -121,7 +121,7 @@
             </div>
           </div>
         </div>
-        <form class="promo-page__form form-capture" action="php/send.php" method="post">
+        <form id="promo-page__form" class="promo-page__form form-capture" action="php/send.php" method="post" onsubmit="callorder()">
           <fieldset class="form-capture__inner">
             <legend class="form-capture__title">
               <h2>Оставьте заявку</h2>
@@ -300,7 +300,7 @@
             <li class="main-portfolio__item"> <img src="img/fitauto.jpg" alt="Карта магазина «Fit auto»" width="404" height="302"></li>
             <li class="main-portfolio__item"> <img src="img/millefamille.jpg" alt="Карта магазина «Mille fa mille»" width="404" height="302"></li>
             <li class="main-portfolio__item"> <img src="img/zoomarket.jpg" alt="Карта магазина «zoo маркет»" width="404" height="302"></li>
-            <li class="main-portfolio__item"> <img src="img/сlubcards.jpg" alt="Карта магазина «Lisete»" width="404" height="302"></li>
+            <li class="main-portfolio__item"> <img src="img/clubcards.jpg" alt="Карта магазина «Lisete»" width="404" height="302"></li>
             <li class="main-portfolio__item"> <img src="img/makk.jpg" alt="Карта автомагазинов и сервиса «Makk мир аккумуляторов»" width="404" height="302"></li>
             <li class="main-portfolio__item"> <img src="img/greengarden.jpg" alt="Карта магазина садовода «Зеленый дворик»" width="404" height="302"></li>
             <li class="main-portfolio__item"> <img src="img/certificate.jpg" alt="Подарочный сертификат на установку окон «Fogel»" width="404" height="302"></li>
@@ -673,7 +673,25 @@
       </form>
     </div>
   </section>
+  <section class="thanks-call">
+    <div class="thanks-call__wrapper">
+      <button class="btn-close" type="button" name="close">
+        <svg width="35" height="35" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 28 28" style="enable-background:new 0 0 28 28;" xml:space="preserve">
+        <g>
+          <path d="M0,24l4,4l10-10l10,10l4-4L18,14L28,4l-4-4L14,10L4,0L0,4l10,10L0,24z"/>
+        </g>
+        </svg>
+      </button>
+      <h2 class="thanks-call__title">Спасибо!</h2>
+      <p class="thanks-call__text">Ваша заявка принята!</p>
+      <p class="thanks-call__text">Специалист компании свяжется с Вами в течение 20 минут.</p>
+        <button class="btn btn--thanks-call" type="button">Закрыть</button>
+      </form>
+    </div>
+  </section>
   <script type="text/javascript" charset="utf-8" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ajax.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/filelayout.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/move.js"></script>
   <script>
