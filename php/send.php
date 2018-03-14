@@ -9,7 +9,6 @@
     $PositionID=50; //50 id Должности ЛПР при необходимости поставить другую
     $user_pass = "info@t-kartika.ru:ma0eh12k";
     $host_api = "https://kardexpress22.mawisoft.ru";
-
     $UserName = $_POST['user-name'];
     $UserPhone = $_POST['phone-number'];
     $UserMail = $_POST['user-mail'];
@@ -111,7 +110,6 @@
     $CheckPhone="/integration/admin/clientsXML.jsp?phone=$UserPhone";
     $XMLRequest=RequestServer($host_api, $user_pass, $CheckPhone, $cookie);
     $XMLRequest = simplexml_load_string($XMLRequest);
-    $IDFlags=FALSE;
     $len=strlen($UserPhone);
     if ($len>10) {
       $ShortPhone =substr($UserPhone, $len-10);
@@ -119,7 +117,9 @@
       $ShortPhone = $UserPhone;
     }
     if ($XMLRequest->client != FALSE) {
+      $commentAdded=false;
       foreach ($XMLRequest->client  as $client ) {
+        $IDFlags=FALSE; //Обнуление флага в цаждом цикле опроса
         if ($client->person != FALSE) {
           echo "раздел персоны существует </br>";
           foreach ($client->person as $person) {
@@ -162,21 +162,21 @@
           echo "Нет контактных данных в разделе клиент";
         }
         $atr=$client->attributes();
-        echo "<br>";
         echo "ID  клиента ".$atr['id'];
         echo "<br>";
         if ($IDFlags == true) {
+          $commentAdded=true;
           $IdClient=$atr['id'];
           echo "ID Искомого клиента $IdClient";
           $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$IdClient&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
 
           RequestServer($host_api, $user_pass, $AddComent, $cookie);
-        }
-        else {
-          echo "Совпадений телефонных номеров не найдено </br>";
-        }
+        } else {
+            echo "Совпадений телефонных номеров не найдено </br>";
+            echo "<br>";
+          }
       }
-      if ($IDFlags == false) {
+      if ($commentAdded == false) {
         echo "!!!!!!совпадений телефонных номеров не найдено надо созать нового клиента";
         $AddUsr= "/integration/set/client?object.name=$UserName&sourceId=$SourceId&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
 

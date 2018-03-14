@@ -26,11 +26,14 @@ function callorder(){
     e.preventDefault();
     //берем из формы метод передачи данных
     var m_method=$(this).attr('method');
+
     //получаем адрес скрипта на сервере, куда нужно отправить форму
     var m_action=$(this).attr('action');
+    console.log(m_action);
     //получаем данные, введенные пользователем в формате input1=value1&input2=value2...,
     //то есть в стандартном формате передачи данных формы
     var m_data=$(this).serialize();
+    console.log(m_data);
     $.ajax({
     type: m_method,
     url: m_action,
