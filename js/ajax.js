@@ -21,18 +21,21 @@ var popupthenks = document.querySelector(".thanks-call");
 
 
 function callorder(){
+
+  var idform="#promo-page__form"
   $(this).submit(function(e){
   //отменяем стандартное действие при отправке формы
     e.preventDefault();
-    //берем из формы метод передачи данных
-    var m_method=$(this).attr('method');
 
+    //берем из формы метод передачи данных
+    var m_method=$(idform).attr('method');
+    console.log(m_method);
     //получаем адрес скрипта на сервере, куда нужно отправить форму
-    var m_action=$(this).attr('action');
+    var m_action=$(idform).attr('action');
     console.log(m_action);
     //получаем данные, введенные пользователем в формате input1=value1&input2=value2...,
     //то есть в стандартном формате передачи данных формы
-    var m_data=$(this).serialize();
+    var m_data=$(idform).serialize();
     console.log(m_data);
     $.ajax({
     type: m_method,
