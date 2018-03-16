@@ -121,7 +121,7 @@
             </div>
           </div>
         </div>
-         <form id="promo-page__form" class="promo-page__form form-capture" action="php/send.php" method="post" onsubmit="callorder()" >
+         <form class="promo-page__form form-capture" action="php/send.php" method="post" onsubmit="return callorder(this)" >
           <fieldset class="form-capture__inner">
             <legend class="form-capture__title">
               <h2>Оставьте заявку</h2>
@@ -227,7 +227,7 @@
     </section>
     <section class="order-free-card">
       <div class="order-free-card__inner">
-        <form class="form-capture-free-card" action="php/send.php" method="post">
+        <form class="form-capture-free-card" action="php/send.php" method="post" onsubmit="return callorder(this)">
           <fieldset class="form-capture-free-card__inner">
             <legend class="form-capture-free-card__title">
               <h2>Заказать бесплатную карту</h2>
@@ -467,7 +467,7 @@
     </section>
     <section class="leave-request-main">
       <div class="leave-request-main__inner">
-        <form class="leave-request-form" action="php/send.php" method="post">
+        <form class="leave-request-form" action="php/send.php" method="post" onsubmit="return callorder(this)">
           <fieldset id="request-for-settleme" class="leave-request-form__part1 ">
             <h2 class="leave-request-form__title">Оставьте заявку на расчет стоимости</h2>
             <p class="leave-request-form__title-text">и наш менеджер рассчитает стоимость вашего заказа</p>
@@ -639,7 +639,7 @@
     <div class="request-call__wrapper">
       <h2 class="request-call__title">Оставить заявку</h2>
       <p class="request-call__text">Специалист нашей компании свяжется с вами, чтобы ответить на ваши вопросы!</p>
-      <form class="request-call__form" action="php/send.php" method="post">
+      <form class="request-call__form" action="php/send.php" method="post" onsubmit="return callorder(this)">
         <button class="btn-close" type="button" name="close">
           <svg width="35" height="35" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 viewBox="0 0 28 28" style="enable-background:new 0 0 28 28;" xml:space="preserve">

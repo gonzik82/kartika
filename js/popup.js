@@ -2,7 +2,7 @@ var link = document.querySelector(".main-header__contact-btn");
 var index;
 var popup = document.querySelector(".request-call");
 var popupThanks = document.querySelector(".thanks-call");
-var user = popup.querySelector("[name=request-call-user-name]");
+var user = popup.querySelector("[name=user-name]");
 var closes = popup.querySelector(".btn-close"),
   close;
 
