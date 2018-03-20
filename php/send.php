@@ -166,8 +166,8 @@
           $IdClient=$atr['id'];
           echo "ID Искомого клиента $IdClient";
           $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$IdClient&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
+          RequestServer($host_api, $user_pass, $AddComent, $cookie); // добавляем комментарий к найденному клиенту
 
-          RequestServer($host_api, $user_pass, $AddComent, $cookie);
         } else {
             echo "Совпадений телефонных номеров не найдено </br>";
             echo "<br>";
@@ -178,6 +178,10 @@
         $AddUsr= "/integration/set/client?object.name=$UserName&sourceId=$SourceId&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
 
         $Request = RequestServer($host_api, $user_pass, $AddUsr, $cookie);
+
+        $СhangeManager="/integration/set/clientPermission?id=$Request&departmentId=50&userId=$ManagerID";
+
+        RequestServer($host_api, $user_pass, $СhangeManager, $cookie); // Закрепляем созданного клиента $Request за менеджером $ManagerID
 
         $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$Request&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
 
