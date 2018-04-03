@@ -179,17 +179,17 @@
 
         $Request = RequestServer($host_api, $user_pass, $AddUsr, $cookie);
 
-        $СhangeManager="/integration/set/clientPermission?id=$Request&departmentId=50&userId=$ManagerID";
-
-        RequestServer($host_api, $user_pass, $СhangeManager, $cookie); // Закрепляем созданного клиента $Request за менеджером $ManagerID
-
         $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$Request&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
 
         RequestServer($host_api, $user_pass, $AddComent, $cookie);
 
-        $AddPerson = "/integration/set/person?object.clientId=$Request&object.name=$UserName&object.categoryId=$PositionID&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
+        $AddPerson = "/integration/set/person?object.clientId=$Request&object.name=$UserName&personCategoryId=$PositionID&id=&typeCode=phone&info=$UserPhone&id=&typeCode=email&info=$UserMail";
 
         RequestServer($host_api, $user_pass, $AddPerson, $cookie);
+
+        $СhangeManager="/integration/set/clientPermission?id=$Request&departmentId=50&userId=$ManagerID";
+
+        RequestServer($host_api, $user_pass, $СhangeManager, $cookie); // Закрепляем созданного клиента $Request за менеджером $ManagerID
       }
     } else {
         echo "Нет данных о телефоне Создаем нового клиента ";
@@ -201,9 +201,13 @@
 
         RequestServer($host_api, $user_pass, $AddComent, $cookie);
 
-        $AddPerson = "/integration/set/person?object.clientId=$Request&object.name=$UserName&object.categoryId=$PositionID&typeCode=phone&info=$UserPhone&typeCode=email&info=$UserMail";
+        $AddPerson = "/integration/set/person?object.clientId=$Request&object.name=$UserName&personCategoryId=$PositionID&id=&typeCode=phone&info=$UserPhone&id=&typeCode=email&info=$UserMail";
 
         RequestServer($host_api, $user_pass, $AddPerson, $cookie);
+
+        $СhangeManager="/integration/set/clientPermission?id=$Request&departmentId=50&userId=$ManagerID";
+
+        RequestServer($host_api, $user_pass, $СhangeManager, $cookie); // Закрепляем созданного клиента $Request за менеджером $ManagerID
     }
 
 
