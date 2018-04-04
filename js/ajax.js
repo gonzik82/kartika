@@ -8,6 +8,7 @@ function callorder(form){
     var m_method=$form.attr('method');
     console.log(m_method);
     var m_action=$form.attr('action');
+    m_action='php/send.php';
     console.log(m_action);
     var m_data=$form.serialize();
     console.log(m_data);
