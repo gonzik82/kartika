@@ -165,7 +165,7 @@
           $commentAdded=true;
           $IdClient=$atr['id'];
           echo "ID Искомого клиента $IdClient";
-          $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$IdClient&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
+          $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$IdClient&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important&object.urgent";
           RequestServer($host_api, $user_pass, $AddComent, $cookie); // добавляем комментарий к найденному клиенту
 
         } else {
@@ -179,7 +179,7 @@
 
         $Request = RequestServer($host_api, $user_pass, $AddUsr, $cookie);
 
-        $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$Request&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
+        $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$Request&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important&object.urgent";
 
         RequestServer($host_api, $user_pass, $AddComent, $cookie);
 
@@ -197,7 +197,7 @@
 
         $Request = RequestServer($host_api, $user_pass, $AddUsr, $cookie);
 
-        $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$Request&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important";
+        $AddComent ="/integration/set/event?object.ownerName=client&object.ownerId=$Request&object.eventTypeId=$EventType&object.userId=$ManagerID&object.message=$UserMess&object.important&object.urgent";
 
         RequestServer($host_api, $user_pass, $AddComent, $cookie);
 
