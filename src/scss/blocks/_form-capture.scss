@@ -76,10 +76,9 @@
   text-transform: uppercase;
   margin: 0;
 
-  &--link{
+  &--link {}
 
-  }
-  &--link:hover{
+  &--link:hover {
     color: $bg-dark-red;
   }
 }
@@ -171,15 +170,16 @@
 }
 
 
-.form-capture__checkbox-input{
+.form-capture__checkbox-input {
   @include visuali-hidden;
   margin-top: 22px;
 
 }
-.form-capture__checkbox{
-    position: relative;
-    padding-left: 35px;
-    display: block;
+
+.form-capture__checkbox {
+  position: relative;
+  padding-left: 35px;
+  display: block;
 
 }
 

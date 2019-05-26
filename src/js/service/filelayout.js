@@ -1,3 +1,5 @@
+import '../lib/jquery-3.2.1.min.js'
+
 var wrapper = $( ".types-personalization__layout" ),
         inp = wrapper.find( "input" ),
         btn = wrapper.find( "span" );

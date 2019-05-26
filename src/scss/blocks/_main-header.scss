@@ -1,0 +1,33 @@
+.main-header__inner{
+  display: flex;
+  width: 960px;
+  margin: 0 auto;
+}
+.main-header__contact{
+    margin-left: auto;
+}
+
+.main-header__contact p {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header__contact-phonenomber{
+  display: block;
+  padding-top: 19px;
+  line-height: 32px;
+  color: #00A3D0;
+  font-size: 30px;
+  text-align: right;
+  font-family: open-sans, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.main-header__contact-text{
+  line-height: 19px;
+  color: #7F7F7F;
+  font-size: 16px;
+  text-align: right;
+  font-weight: 400;
+}

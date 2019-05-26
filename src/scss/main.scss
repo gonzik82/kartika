@@ -1,89 +1,34 @@
-@import "utils/libs";
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/fonts";
-
-html {
-  line-height: $mainLineHeight;
-	font-size: $mainFontSize;
-	color: $mainFontColor;
-  height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-		font-size: 16px;
-  }
-  @media screen and (max-width: $tableWidth) {
-		font-size: 15px;
-  }
-  @media screen and (max-width: $phoneWidth) {
-		font-size: 14px;
-  }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: $mainFont;
-	font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-*, *:before, *:after { box-sizing: border-box; }
-
-h1, h2, h3, h4, h5, h6 { margin: 0; }
-
-a { text-decoration: none; }
-
-ul, li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-section, .section {
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  width: 100%;
-  flex: 0 0 auto;
-  position: relative;
-  margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
-  }
-}
-
-// Modules
-@import "modules/wrapper.scss";
+@import "utils/_variables.scss";
+@import "utils/_mixins.scss";
+@import "global/scaffolding.scss";
+@import "blocks/main-header.scss";
+@import "blocks/header-logo.scss";
+@import "blocks/btn.scss";
+@import "blocks/capture-page.scss";
+@import "blocks/advantages-btn.scss";
+@import "blocks/disign-card-btn.scss";
+@import "blocks/main-navigation.scss";
+@import "blocks/promo-page.scss";
+@import "blocks/timer.scss";
+@import "blocks/form-capture.scss";
+@import "blocks/why-us-page.scss";
+@import "blocks/types-products.scss";
+@import "blocks/order-free-card.scss";
+@import "blocks/form-capture-free-card.scss";
+@import "blocks/main-portfolio.scss";
+@import "blocks/btn-portfolo.scss";
+@import "blocks/price-main.scss";
+@import "blocks/customer-reviews.scss";
+@import "blocks/btn-reviews.scss";
+@import "blocks/FAQ-main.scss";
+@import "blocks/FAQ-form.scss";
+@import "blocks/manufacture-main.scss";
+@import "blocks/leave-request-main.scss";
+@import "blocks/leave-request-form.scss";
+@import "blocks/types-personalization.scss";
+@import "blocks/main-contacts.scss";
+@import "blocks/cocial-btn.scss";
+@import "blocks/main-footer.scss";
+@import "blocks/request-call.scss";
+@import "blocks/thanks-call.scss";
+@import "blocks/btn-close.scss";

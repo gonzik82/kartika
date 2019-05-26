@@ -1,15 +1,9 @@
-@include container() {
+@mixin container() {
   width: 960px;
   margin: 0 auto;
-  // @media @tablet-widths {
-  //   width: 620px;
-  // }
-  // @media @desktop-widths {
-  //   width: 960px;
-  // }
 }
 
-@include visuali-hidden() {
+@mixin visuali-hidden() {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
