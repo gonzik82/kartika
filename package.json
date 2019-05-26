@@ -1,33 +1,45 @@
 {
-  "name": "Karika",
-  "version": "3.0.0",
-  "private": true,
-  "description": "Сайт компании картика ",
+  "name": "webpacktemplate",
+  "version": "1.0.0",
+  "description": "My template",
+  "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --open",
-    "eslint": "eslint src/**/*.js",
-    "test": "npm run eslint"
+    "start": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "build": "webpack --config ./build/webpack.build.conf.js"
   },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "keywords": [
+    "webpack",
+    "webpack4",
+    "merge",
+    "bable",
+    "bable7",
+    "scss"
+  ],
+  "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.3.3",
-    "babel-loader": "8.0.5",
-    "clean-webpack-plugin": "^1.0.1",
-    "copy-webpack-plugin": "5.0.0",
-    "eslint": "^5.13.0",
-    "eslint-config-htmlacademy": "0.5.2",
-    "html-webpack-plugin": "3.2.0",
-    "webpack": "4.29.5",
-    "webpack-cli": "3.2.3",
-    "webpack-dev-server": "3.2.0"
-  },
-  "engines": {
-    "node": "10"
-  },
-  "dependencies": {
-    "chart.js": "2.8.0",
-    "chartjs-plugin-datalabels": "0.6.0",
-    "lodash": "^4.17.11",
-    "moment": "^2.24.0"
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^2.1.1",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.12.0",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.1"
   }
 }

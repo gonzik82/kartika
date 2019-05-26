@@ -1,15 +1,15 @@
 var step = "680";
-var list, сlassSection, direction, btn, obj, sumStep,сlassSectionTrue;
+var list, сlassSection, direction, btn, obj, sumStep, сlassSectionTrue;
 var i = 0;
 
 
 function move(obj, сlassSection, direction, shift, sumStep) {
   btn = document.querySelector(сlassSection).querySelectorAll("button");
   list = document.querySelector(сlassSection).querySelectorAll("ul");
-  step=shift;
-  if (сlassSectionTrue!=сlassSection) {
-    сlassSectionTrue=сlassSection;
-    i=0;
+  step = shift;
+  if (сlassSectionTrue != сlassSection) {
+    сlassSectionTrue = сlassSection;
+    i = 0;
     $(list).css({
       transform: "translateX(0)"
     });
@@ -37,7 +37,7 @@ function move(obj, сlassSection, direction, shift, sumStep) {
     $(btn[1]).attr('disabled', 'disabled');
   };
 
-  if ($(btn[1]).prop('disabled') && (i < (sumStep-1))) {
+  if ($(btn[1]).prop('disabled') && (i < (sumStep - 1))) {
     $(btn[1]).removeAttr('disabled')
   };
 
