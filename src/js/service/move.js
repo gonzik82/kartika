@@ -3,7 +3,7 @@ var list, сlassSection, direction, btn, obj, sumStep, сlassSectionTrue;
 var i = 0;
 
 
-function move(obj, сlassSection, direction, shift, sumStep) {
+window.move = (obj, сlassSection, direction, shift, sumStep) => {
   btn = document.querySelector(сlassSection).querySelectorAll("button");
   list = document.querySelector(сlassSection).querySelectorAll("ul");
   step = shift;
@@ -14,7 +14,6 @@ function move(obj, сlassSection, direction, shift, sumStep) {
       transform: "translateX(0)"
     });
   };
-
 
 
   if (obj == btn[0]) {
@@ -58,3 +57,4 @@ function moveright() {
     transition: ".6s transform"
   });
 }
+
