@@ -44,6 +44,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "base-64": "^0.1.0",
     "jquery": "^3.4.1"
   }
 }

@@ -1,9 +1,11 @@
+import test from './service/connect';
+
 window.callorder = (form) => {
 
   const formData = new FormData(form);
   const data = processForm(formData);
   console.log(data);
-
+  test();
 
   $(".thanks-call").addClass("thanks-call--show");
   $(".thanks-call__wrapper").addClass("thanks-call__wrapper--show");

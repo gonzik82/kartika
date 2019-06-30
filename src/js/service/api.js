@@ -1,8 +1,13 @@
-
+import ModelTask from './model-task';
 // /////////
 // api.js
 // ////////
-
+const Method = {
+  GET: `GET`,
+  POST: `POST`,
+  PUT: `PUT`,
+  DELETE: `DELETE`
+};
 
 const checkStatus = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -11,6 +16,11 @@ const checkStatus = (response) => {
     throw new Error(`${response.status}: ${response.statusText}`);
   }
 };
+
+const toJSON = (response) => {
+  return response.json();
+};
+
 
 export default class API {
   constructor({
