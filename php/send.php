@@ -12,13 +12,7 @@
     
     $UserName = urlencode($UserName);
     $UserMail = urlencode($UserMail);
-    
-    $time = time(); // Вот это значение отправляем в базу
-    $time += 7 * 3600; // Добавляем 3 часа к времени по Гринвичу
     $today = urlencode(date("F j, Y, g:i a"));
-
-    // $UserMess="!!Новая заявка с сайта!! от ".$UserName." телефон "
-    //   .$UserPhone. "Адрес почты ".$UserMail;
 
     $UserMess=urlencode("!!Новая заявка с сайта!!");
     foreach($_POST as $key => $value)
