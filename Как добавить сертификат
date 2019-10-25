@@ -1,0 +1,15 @@
+При работе с curl не только в php может возникнуть подобная проблема:
+
+cURL error 60: SSL certificate : self signed certificate in certificate chain (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+Решить её можно следующим образом:
+
+Скачать последнюю версию файла cacert.pem.
+В конфигурационном файле php.ini добавить или отредактировать строку curl.cainfo=/path/to/cacert.pem.
+Если доступа к php.ini нет, то можно установить эту опцию программно:
+curl_setopt($ch, CURLOPT_CAINFO, '/path/to/cacert.pem');
+Если проблема снова появляется, то можно настроить автоматическое обновление этого файла, например, с помощью команды:
+
+curl --remote-name --time-cond /path/to/cacert.pem https://curl.haxx.se/ca/cacert.pem
+Т.к. файл обновляется достаточно всего несколько раз в год, то обновлять его чаще раза в день или неделю не имеет смысла.
+
+cacert.pem содержит набор сертификатов CA (Certification Authority) — доверенных центров сертификации. Этот файл иногда называют «CA cert store».
